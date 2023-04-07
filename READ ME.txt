@@ -1,0 +1,2 @@
+Make sure that .py files are set to open with Python for the bank ripper to work
+Custom samples should be in wav format for proper conversion to vadpcm.bin
