@@ -6,6 +6,8 @@ the rom to OoTR Bank Ripper and drag the rom onto the "drop you rom here.bat" th
 music folder that the sequence is in. After you need to set the bank in the meta file to "-" for the randomizer to recognise that you are using a custom bank. If your
 bank uses a custom sample make sure that the offset for the sample in the bank matches the respective sample in the meta file so the randomizer knows what sample is for
 what instrument
+Your .meta file should look like this
+VVVVV
 CUSTOM MUSIC NAME HERE
 -
 bgm/fanfare here
