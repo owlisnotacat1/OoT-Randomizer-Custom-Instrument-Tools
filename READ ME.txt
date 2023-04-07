@@ -1,7 +1,11 @@
 Make sure that .py files are set to open with Python for the bank ripper to work
 Custom samples should be in wav format for proper conversion to vadpcm.bin
 An OoT 1.0 Decompressed rom is required for the instrument bank creation process you need to find this yourself
-To get a zbank/bankmeta file you need to create a custom bank using seq64 save it to a bank slot I usually use bank 0x25 then save it to rom. After that you need to take the rom to OoTR Bank Ripper and drag the rom onto the "drop you rom here.bat" then you select the zbank/bankmeta that you saved over in Seq64 and drag it over to the music folder that the sequence is in. After you need to set the bank in the meta file to "-" for the randomizer to recognise that you are using a custom bank. If your bank uses a custom sample make sure that the offset for the sample in the bank matches the respective sample in the meta file so the randomizer knows what sample is for what instrument
+To get a zbank/bankmeta file you need to create a custom bank using seq64 save it to a bank slot I usually use bank 0x25 then save it to rom. After that you need to take
+the rom to OoTR Bank Ripper and drag the rom onto the "drop you rom here.bat" then you select the zbank/bankmeta that you saved over in Seq64 and drag it over to the
+music folder that the sequence is in. After you need to set the bank in the meta file to "-" for the randomizer to recognise that you are using a custom bank. If your
+bank uses a custom sample make sure that the offset for the sample in the bank matches the respective sample in the meta file so the randomizer knows what sample is for
+what instrument
 CUSTOM MUSIC NAME HERE
 -
 bgm/fanfare here
