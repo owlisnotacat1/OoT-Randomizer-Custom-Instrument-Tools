@@ -13,3 +13,6 @@ CUSTOM MUSIC NAME HERE
 bgm/fanfare here
 categories here
 ZSOUND:soundnamehere.zsound:12345678
+^^^^^
+N64SoundTool is useful for extracting samples from other N64 games you can also use it to import samples but its not as accurate as the sound files that Sample Creation
+Tools create
