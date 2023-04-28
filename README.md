@@ -1,3 +1,5 @@
+# Creating A Customm Instrument Bank
+
 Make sure that .py files are set to open with Python for the bank ripper to work
 Custom samples should be in wav format for proper conversion to vadpcm.bin
 An OoT 1.0 Decompressed rom is required for the instrument bank creation process you need to find this yourself
