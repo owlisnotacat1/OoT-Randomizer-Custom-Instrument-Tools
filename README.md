@@ -1,7 +1,6 @@
 # Creating A Customm Instrument Bank
 
 For This tutorial I will be using Seq64 V1 which can be found [here](https://github.com/sauraen/seq64/releases/tag/V1.0)
-
 Make sure that .py files are set to open with Python for the bank ripper to work
 Custom samples should be in wav format for proper conversion to vadpcm.bin
 An OoT 1.0 Decompressed rom is required for the instrument bank creation process you need to find this yourself
