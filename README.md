@@ -2,10 +2,10 @@
 
 For This tutorial I will be using Seq64 V1 which can be found [here](https://github.com/sauraen/seq64/releases/tag/V1.0)
 
-##Things you will learn how to do
+## Things you will learn how to do:
 
-*Make a custom instrument bank for OoTR
-*make a custom instrument sample for OoTR
+* Make a custom instrument bank for OoTR
+* make a custom instrument sample for OoTR
 
 Make sure that .py files are set to open with Python for the bank ripper to work
 Custom samples should be in wav format for proper conversion to vadpcm.bin
