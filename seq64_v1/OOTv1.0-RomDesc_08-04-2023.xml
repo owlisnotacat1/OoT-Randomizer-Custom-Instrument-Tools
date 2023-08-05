@@ -1,0 +1,3727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- seq64 ROM Description File -->
+<RomDesc ftaddr="29744" abfindex="3" asfindex="4" atfindex="5" indextype="2">
+  <cmdlist>
+    <command cmd="255" name="End of Data" action="End of Data" validinseq="1"
+             validinchn="1" validintrk="1"/>
+    <command cmd="0" name="Chn Timestamp" action="Timestamp" cmdend="15" validinchn="1">
+      <parameter datasrc="offset" datalen="0" name="Time" meaning="Delay" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="120" name="Relative Trk Ptr" action="Ptr Track Data" cmdend="123"
+             validinchn="1">
+      <parameter datasrc="offset" datalen="0" name="Layer" meaning="Note Layer"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Relative Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="136" name="Absolute Trk Ptr" action="Ptr Track Data" cmdend="139"
+             validinchn="1">
+      <parameter datasrc="offset" datalen="0" name="Note Layer" meaning="Note Layer"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="176" name="TEST Call Absolute" action="No Action" validinchn="1">
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="179" name="Unknown" action="No Action" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="187" name="Unknown CC (Vibrato speed?)" action="No Action"
+             validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="CC number?" meaning="None"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="CC value?" meaning="None" add="0"
+                 multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="193" name="Instrument" action="Chn Instrument" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Instrument" meaning="Value"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="194" name="Transposition" action="Chn Transpose" validinchn="1"
+             validintrk="0">
+      <parameter datasrc="fixed" datalen="1" name="Value" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="196" name="Channel Start" action="Chn Reset" validinchn="1"/>
+    <command cmd="198" name="Unknown" action="No Action" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="202" name="Unknown" action="No Action" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="208" name="Unknown" action="No Action" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="211" name="Pitch Bend" action="Chn Pitch Bend" validinchn="1"
+             validintrk="0">
+      <parameter datasrc="fixed" datalen="1" name="Bend" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="212" name="Effect Level" action="Chn Effects" validinchn="1"
+             validintrk="0">
+      <parameter datasrc="fixed" datalen="1" name="Value" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="216" name="Vibrato (Chn)" action="Chn Vibrato" validinchn="1"
+             validintrk="0">
+      <parameter datasrc="fixed" datalen="1" name="Vibrato" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="218" name="Unknown" action="No Action" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Unnamed" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="220" name="Drumset?" action="No Action" validinchn="1" validintrk="0">
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="221" name="Chan Pan" action="Chn Pan" validinchn="1" validintrk="0">
+      <parameter datasrc="fixed" datalen="1" name="Pan" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="223" name="Chan Volume (Chn)" action="Chn Volume" validinchn="1"
+             validintrk="0">
+      <parameter datasrc="fixed" datalen="1" name="Volume" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="224" name="Unknown" action="No Action" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="229" name="Unknown" action="No Action" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="233" name="Channel Priority" action="No Action" validinchn="1"
+             validintrk="0">
+      <parameter datasrc="fixed" datalen="1" name="Priority" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="0" name="Note w/ T, V, G" action="Track Note" cmdend="63"
+             validintrk="1">
+      <parameter datasrc="offset" datalen="0" name="Note" meaning="Note" add="0"
+                 multiply="1"/>
+      <parameter datasrc="variable" datalen="2" name="Timestamp" meaning="Delay"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Velocity" meaning="Velocity"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Gate" meaning="Gate Time" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="64" name="Note w/ T, V" action="Track Note" validintrk="1"
+             cmdend="127">
+      <parameter datasrc="offset" datalen="0" name="Note" meaning="Note" add="0"
+                 multiply="1"/>
+      <parameter datasrc="variable" datalen="2" name="Timestamp" meaning="Delay"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Velocity" meaning="Velocity"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="128" name="Note w/ V, G" action="Track Note" validintrk="1"
+             cmdend="191">
+      <parameter datasrc="offset" datalen="0" name="Note" meaning="Note" add="0"
+                 multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Velocity" meaning="Velocity"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Gate Time" meaning="Gate Time"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="192" name="Trk Timestamp" action="Timestamp" validintrk="1">
+      <parameter datasrc="variable" datalen="2" name="Timestamp" meaning="Delay"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="194" name="Ly Transpose" action="Layer Transpose" validintrk="1">
+      <parameter datasrc="fixed" datalen="1" name="Value" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="0" name="Load Chn Bit to Q" action="No Action" cmdend="15"
+             validinseq="1">
+      <parameter datasrc="offset" datalen="0" name="Channel" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="16" name="Ignored Seq Cmd" action="No Action" cmdend="63"
+             validinseq="1"/>
+    <command cmd="64" name="Chn C Unknown (init?)" action="No Action" cmdend="79"
+             validinseq="1" validinchn="1">
+      <parameter datasrc="offset" datalen="0" name="Channel" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="80" name="Q -= var[C]" action="No Action" cmdend="95" validinseq="1"
+             validinchn="1">
+      <parameter datasrc="offset" datalen="0" name="C" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="96" name="Load ??? DMA from var[C]" action="No Action" cmdend="111"
+             validinseq="1" validinchn="1">
+      <parameter datasrc="offset" datalen="0" name="C" meaning="None" add="0"
+                 multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Unknown 1" meaning="None" add="0"
+                 multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Unknown 2" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="112" name="var[C] = Q" action="No Action" cmdend="127" validinseq="1"
+             validinchn="1">
+      <parameter datasrc="offset" datalen="0" name="C" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="128" name="Q = var[C]; if(C&lt;2) var[C] = -1;" action="No Action"
+             cmdend="143" validinseq="1" validinchn="1">
+      <parameter datasrc="offset" datalen="0" name="Unnamed" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="144" name="Absolute Chn Ptr" action="Ptr Channel Header"
+             cmdend="159" validinseq="1">
+      <parameter datasrc="offset" datalen="0" name="Channel" meaning="Channel"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="160" name="Relative Chn Ptr" action="Ptr Channel Header"
+             cmdend="175" validinseq="1">
+      <parameter datasrc="offset" datalen="0" name="Channel" meaning="Channel"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Relative Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="176" name="Set Up New Seq from var[C]" action="No Action"
+             cmdend="191" validinseq="1" validinchn="0">
+      <parameter datasrc="offset" datalen="0" name="C" meaning="None" add="0"
+                 multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="New seq index" meaning="None"
+                 add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="2" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="192" name="Unknown (Seq Execute?)" action="No Action" validinseq="1"/>
+    <command cmd="196" name="WIP possibly return from parsing?" action="No Action"
+             validinseq="1">
+      <parameter datasrc="fixed" datalen="1" name="Unknown 1" meaning="None" add="0"
+                 multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Unknown 2" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="197" name="WIP Store to SeqParams[E0]" action="No Action"
+             validinseq="1">
+      <parameter datasrc="fixed" datalen="2" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="198" name="Return from Sequence" action="End of Data" validinseq="1"/>
+    <command cmd="199" name="Memory Write" action="No Action" validinseq="1"
+             validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Value (this plus Q gets written)"
+                 meaning="None" add="0" multiply="1"/>
+      <parameter datasrc="fixed" datalen="2" name="Address (into table starting at S2+18)"
+                 meaning="None" add="0" multiply="1"/>
+    </command>
+    <command cmd="200" name="Q -= val" action="No Action" validinseq="1" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Value" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="201" name="Q &amp;= val" action="No Action" validinseq="1"
+             validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Value" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="202" name="Ignored" action="No Action" validinseq="1"/>
+    <command cmd="203" name="Ignored" action="No Action" validinseq="1"/>
+    <command cmd="204" name="Q = val" action="No Action" validinseq="1" validinchn="1">
+      <parameter datasrc="fixed" datalen="1" name="Value" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="205" name="Unknown (Pre-Seq-Load)" action="No Action" validinseq="1">
+      <parameter datasrc="fixed" datalen="1" name="Zero (Unknown)" meaning="None"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="206" name="Unknown" action="No Action" validinseq="1">
+      <parameter datasrc="fixed" datalen="1" name="Unknown" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="211" name="Sequence Format" action="Sequence Format" validinseq="1">
+      <parameter datasrc="fixed" datalen="1" name="Format" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="213" name="Sequence Type" action="Sequence Type" validinseq="1">
+      <parameter datasrc="fixed" datalen="1" name="Type" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="214" name="Channel Disable" action="Channel Disable" validinseq="1">
+      <parameter datasrc="fixed" datalen="2" name="Channels" meaning="Bitfield"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="215" name="Channel Enable" action="Channel Enable" validinseq="1">
+      <parameter datasrc="fixed" datalen="2" name="Channels" meaning="Bitfield"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="219" name="Master Volume" action="Master Volume" validinseq="1">
+      <parameter datasrc="fixed" datalen="1" name="Volume" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="221" name="Tempo" action="Tempo" validinseq="1">
+      <parameter datasrc="fixed" datalen="1" name="Tempo" meaning="Value" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="223" name="Unknown" action="No Action" validinseq="1" validinchn="0">
+      <parameter datasrc="fixed" datalen="1" name="Unnamed" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="239" name="Ignore 3 Bytes" action="No Action" validinseq="1">
+      <parameter datasrc="fixed" datalen="2" name="Ignored" meaning="None" add="0"
+                 multiply="1"/>
+      <parameter datasrc="fixed" datalen="1" name="Ignored" meaning="None" add="0"
+                 multiply="1"/>
+    </command>
+    <command cmd="251" name="Branch Abs Always" action="Jump Same Level" validinseq="1"
+             validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="242" name="Branch Rel if Q&lt;0" action="Jump Same Level"
+             validinseq="1" validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="1" name="Address (Relative)" meaning="Relative Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="243" name="Branch Rel if Q==0" action="Jump Same Level"
+             validinseq="1" validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="1" name="Address (Relative)" meaning="Relative Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="244" name="Branch Rel Always" action="Jump Same Level" validinseq="1"
+             validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="1" name="Address (Relative)" meaning="Relative Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="245" name="Branch Abs if Q&gt;=0" action="Jump Same Level"
+             validinseq="1" validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="246" name="Branch Abs to Seq Start" action="Jump Same Level"
+             validinseq="1" validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="0" name="No Data, is 0" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="247" name="Loop End" action="Loop End" validinseq="1" validinchn="1"
+             validintrk="1"/>
+    <command cmd="248" name="Loop Start" action="Loop Start" validinseq="1"
+             validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="1" name="Loop Count" meaning="Loop Count"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="249" name="Branch Abs if Q&lt;0" action="Jump Same Level"
+             validinseq="1" validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="250" name="Branch Abs if Q==0" action="Jump Same Level"
+             validinseq="1" validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="252" name="Call Absolute" action="Call Same Level" validinseq="1"
+             validinchn="1" validintrk="1">
+      <parameter datasrc="fixed" datalen="2" name="Address" meaning="Absolute Address"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="253" name="Timestamp" action="Timestamp" validinseq="1"
+             validinchn="1" validintrk="1">
+      <parameter datasrc="variable" datalen="2" name="Delta Time" meaning="Delay"
+                 add="0" multiply="1"/>
+    </command>
+    <command cmd="254" name="(Return 1?)" action="No Action" validinseq="1"
+             validinchn="1" validintrk="1"/>
+  </cmdlist>
+  <filelist>
+    <file index="0" name="Header" type="ROM Header"/>
+    <file index="1" name="Boot Code" type="Boot Code"/>
+    <file index="2" name="Master File Table" type="File Table"/>
+    <file index="3" type="Audiobank" name="Audiobank"/>
+    <file index="4" type="Audioseq" name="Audioseq"/>
+    <file index="5" name="Audiotable" type="Audiotable"/>
+  </filelist>
+  <knownfilelist>
+    <knownfile type="Audiobank Index" from_ft="0" address="12097184" length="624"/>
+    <knownfile type="Audiobank" from_ft="1" ftindex="3" address="54160" length="117328"/>
+    <knownfile type="Audioseq Index" from_ft="0" address="12098256" length="1776"/>
+    <knownfile type="Audioseq" from_ft="1" ftindex="4" address="171488" length="325264"/>
+    <knownfile type="Audiotable Index" from_ft="0" address="12100032" length="128"/>
+    <knownfile type="Audiotable" from_ft="1" ftindex="5" address="496752" length="4590288"/>
+    <knownfile type="Sequence Banks Map" from_ft="0" address="12097808" length="448"/>
+  </knownfilelist>
+  <audiobankidx>
+    <indexentry index="0" name="SFX Bank">
+      <instruments>
+        <item index="0" name="00. Dirt Footstep SFX?" map="program" program="0"
+              transpose="0"/>
+        <item index="1" name="01. Sand Footstep SFX?" map="program"/>
+        <item index="2" name="02. Stone Footstep SFX" map="program"/>
+        <item index="3" name="03. Water Footstep SFX" map="program"/>
+        <item index="4" name="04. Splash Footstep SFX" map="program"/>
+        <item index="5" name="05. Unknown SFX (Rock?)" map="program"/>
+        <item index="6" name="06. Unknown SFX (Footstep?)" map="program"/>
+        <item index="7" name="07. Grass Footstep SFX" map="program"/>
+        <item index="8" name="08. Chest Reveal SFX, Others?" map="program"/>
+        <item index="9" name="09. Snow Footstep SFX?" map="program"/>
+        <item index="10" name="0A. Unknown SFX (Rock Related?)" map="program"/>
+        <item index="11" name="0B. Unknown SFX (Footstep?)" map="program"/>
+        <item index="12" name="0C. Splash SFX 1" map="program"/>
+        <item index="13" name="0D. Splash SFX 2" map="program"/>
+        <item index="14" name="0E. Unknown Sand SFX (Quicksand?)" map="program"/>
+        <item index="15" name="0F. Mid: Egg Hatch SFX, High: Wind SFX" map="program"/>
+        <item index="16" name="10. Unknown SFX (Sand?)" map="program"/>
+        <item index="17" name="11. Unknown White Noise SFX 1" map="program"/>
+        <item index="18" name="12. Unknown White Noise SFX 2" map="program"/>
+        <item index="19" name="13. Splash SFX 3" map="program" program="0"
+              transpose="0"/>
+        <item index="20" name="14. Swimming SFX" map="program"/>
+        <item index="21" name="15. Mid: Drum SFX?, High: Gunshot SFX" map="program"/>
+        <item index="22" name="16. Footstep SFX?" map="program"/>
+        <item index="23" name="17. Footstep SFX?" map="program"/>
+        <item index="24" name="18. Iron Boot Footstep SFX" map="program"/>
+        <item index="25" name="19. Hover Boot/Ice Footstep SFX" map="program"/>
+        <item index="26" name="1A. Mid: Metal Clink SFX 1, High: Metal Clink SFX 2"
+              map="program"/>
+        <item index="27" name="1B. Scratch SFX?" map="program"/>
+        <item index="28" name="1C. Link Sword Sheathe SFX" map="program"/>
+        <item index="29" name="1D. Link Sword Unsheathe SFX" map="program"/>
+        <item index="30" name="1E. Whoosh SFX" map="program"/>
+        <item index="31" name="1F. Unknown SFX" map="program"/>
+        <item index="32" name="20. Metal Clang SFX" map="program"/>
+        <item index="33" name="21. Mid: Bow Draw SFX, High: Bow Twang SFX"
+              map="program"/>
+        <item index="34" name="22. Hookshot Chain SFX" map="program"/>
+        <item index="35" name="23. Mid: Bombchu Fuse SFX, High: Bombchu Moving SFX"
+              map="program"/>
+        <item index="36" name="24. Unknown SFX (Bank Stamp SFX in MM)" map="program"/>
+        <item index="37" name="25. Like Like SFX?" map="program"/>
+        <item index="38" name="26. Arrow Hitting Wood/Kakariko Child Hammer SFX"
+              map="program"/>
+        <item index="39" name="27. Whoosh SFX 2 (Boomerang?)" map="program"/>
+        <item index="40" name="28. Unknown SFX (Rock Related?)" map="program"/>
+        <item index="41" name="29. Mid: Pop SFX, High: Cursor SFX?" map="program"/>
+        <item index="42" name="2A. Robotic Buzzing SFX" map="program"/>
+        <item index="43" name="2B. Unknown SFX (A Thud Sound?)" map="program"/>
+        <item index="44" name="2C. Mid: Lens of Truth SFX, High: Whoosh SFX 3"
+              map="program"/>
+        <item index="45" name="2D. Mid: Wooden Door Open SFX, High: Wooden Door Close SFX"
+              map="program"/>
+        <item index="46" name="2E. Mid: Blue Warp SFX?, High: Squeaking SFX?"
+              map="program"/>
+        <item index="47" name="2F. Explosion SFX" map="program"/>
+        <item index="48" name="30. Horse Gallop SFX" map="program"/>
+        <item index="49" name="32. Mid: Horse Whinny SFX, High: Horse Snort SFX"
+              map="program"/>
+        <item index="50" name="33. Mid: Running Water SFX, High: White Noise SFX 1 (Waterfall)"
+              map="program"/>
+        <item index="51" name="34. Ocarina SFX 1 (Special Effect)" map="program"/>
+        <item index="52" name="35. Ocarina SFX 2" map="program"/>
+        <item index="53" name="36. Mid: Stone on Stone Moving SFX, High: Metal Door Closing SFX"
+              map="program"/>
+        <item index="54" name="37. Rock Rolling SFX?" map="program"/>
+        <item index="55" name="38. Lava Bubbling SFX" map="program"/>
+        <item index="56" name="39. Chain Pulley SFX (Hyrule Castle Gate)" map="program"/>
+        <item index="57" name="3A. Mid: Chicken Cluck SFX, High: Frog Ribbit SFX"
+              map="program"/>
+        <item index="58" name="3B. Door Thud SFX" map="program"/>
+        <item index="59" name="3C. Wind SFX" map="program"/>
+        <item index="60" name="3D. Mid: Rooster Crow SFX, High: Wolf Howl SFX"
+              map="program"/>
+        <item index="61" name="3E. Light Splash SFX (Fish?)" map="program"/>
+        <item index="62" name="3F. Mid: Wooden Clack SFX, High: Stick Clack SFX"
+              map="program"/>
+        <item index="63" name="40. Fairy Flying SFX 1? (Fairy Related)" map="program"/>
+        <item index="64" name="41. Unknown SFX" map="program"/>
+        <item index="65" name="42. Mid: Door Creak SFX, High: Door Creak Low SFX"
+              map="program"/>
+        <item index="66" name="43. Unknown SFX" map="program"/>
+        <item index="67" name="44. Glass Hum SFX" map="program"/>
+        <item index="68" name="45. Fairy Flying SFX 2? (Fairy Related)" map="program"/>
+        <item index="69" name="46. Mid: Electric SFX (Barinade?), High: Pot Break SFX"
+              map="program"/>
+        <item index="70" name="47. Water Drip SFX" map="program"/>
+        <item index="71" name="48. Water Bubbling SFX (Morpha Cutscene?)" map="program"/>
+        <item index="72" name="49. Mid: Fire Crackle SFX, High: Cow Moo SFX"
+              map="program"/>
+        <item index="73" name="4A. Low: Balloon Inflate SFX, High: Thunder SFX"
+              map="program"/>
+        <item index="74" name="4B. Unknown SFX" map="program"/>
+        <item index="75" name="4C. Unknown SFX (Pop? Bang? Thud?)" map="program"/>
+        <item index="76" name="4D. Mid: Wind SFX?, High: Revving SFX" map="program"/>
+        <item index="77" name="4E. Cloth Flutter SFX" map="program"/>
+        <item index="78" name="4F. Mid: Castle Town Crowd SFX, High: Glass Shatter SFX (Ice?)"
+              map="program"/>
+        <item index="79" name="50. Scratch SFX 2?" map="program"/>
+        <item index="80" name="51. Mid: Dodongo Roar, High: Dog Bark SFX" map="program"/>
+        <item index="81" name="52. Woodwind Noise SFX" map="program"/>
+        <item index="82" name="53. Accordion Noise SFX" map="program"/>
+        <item index="83" name="54. Piano/Harp Noise SFX 1" map="program"/>
+        <item index="84" name="55. Malon Voice SFX" map="program"/>
+        <item index="85" name="56. Whistle Noise SFX?" map="program"/>
+        <item index="86" name="57. Mid: Wrong Note SFX, High: Unknown Metal Sound SFX"
+              map="program"/>
+        <item index="87" name="58. Bird Chirp SFX" map="program"/>
+        <item index="88" name="59. Piano/Harp Noise SFX 2" map="program"/>
+        <item index="89" name="5A. Mid: Camera Alignment SFX, High: Lock-on SFX"
+              map="program"/>
+        <item index="90" name="5B. Metal Chain SFX" map="program"/>
+      </instruments>
+    </indexentry>
+    <indexentry index="1" name="Actor Sounds">
+      <instruments>
+        <item index="0" name="00. Pop/Thud SFX (Shabom?)" map="program" program="0"
+              transpose="0"/>
+        <item index="1" name="01. Dodongo Roar SFX" map="program"/>
+        <item index="2" name="02. Balloon Inflate SFX" map="program"/>
+        <item index="3" name="03. Doom Monster Roar SFX" map="program"/>
+        <item index="4" name="04. Skulltula Skitter SFX" map="program"/>
+        <item index="5" name="05. Spider Egg Hatch SFX" map="program"/>
+        <item index="6" name="06. Rock Explosion SFX" map="program"/>
+        <item index="7" name="07. Unknown Buzz SFX (Creaking? Frog?)" map="program"/>
+        <item index="8" name="08. Poe Hover SFX?" map="program"/>
+        <item index="9" name="09. Clicking SFX (Keese Attack?)" map="program"/>
+        <item index="10" name="0A. Wing Flap SFX" map="program"/>
+        <item index="11" name="0B. Volvagia Pained Roar SFX" map="program"/>
+        <item index="12" name="0C. Scratch/Electric SFX (Skulltula Related?)"
+              map="program"/>
+        <item index="13" name="0D. &quot;Ah&quot; SFX (Frog Croak?)" map="program"/>
+        <item index="14" name="0E. SM64 Boo Laugh SFX (Lizalfos Laugh?)" map="program"/>
+        <item index="15" name="0F. Mid: Lizalfos SFX, High: Lizalfos Footstep SFX"
+              map="program"/>
+        <item index="16" name="10. Deku Scrub Voice SFX" map="program"/>
+        <item index="17" name="11. Glass Break SFX (Ice?)" map="program"/>
+        <item index="18" name="12. Wind SFX 1" map="program"/>
+        <item index="19" name="13. Unknown White Noise SFX" map="program"/>
+        <item index="20" name="14. Mid: Gulp SFX, High: Stick Clack SFX" map="program"/>
+        <item index="21" name="15. Deku Baba Beak Snap SFX" map="program"/>
+        <item index="22" name="16. Wind SFX 2" map="program"/>
+        <item index="23" name="17. Crow/Eagle/Bat SFX" map="program"/>
+        <item index="24" name="18. Mid: Buzz SFX, High: Deku Baba Breath SFX"
+              map="program"/>
+        <item index="25" name="19. Stalfos Sword Swing SFX" map="program"/>
+        <item index="26" name="1A. Stalchild Laughing SFX" map="program"/>
+        <item index="27" name="1B. Stalfos Laughing SFX" map="program"/>
+        <item index="28" name="1C. Whip SFX (Used for Garo in MM)" map="program"/>
+        <item index="29" name="1D. Thunder SFX" map="program"/>
+        <item index="30" name="1E. Electric SFX (Ganon Summoning Orb)" map="program"/>
+        <item index="31" name="1F. Phantom/Regular Ganon Hover SFX" map="program"/>
+        <item index="32" name="20. Phantom Ganon Attack SFX?" map="program"/>
+        <item index="33" name="21. Whoosh SFX" map="program"/>
+        <item index="34" name="22. Thunder SFX 2" map="program"/>
+        <item index="35" name="23. Ganon Related SFX?" map="program"/>
+        <item index="36" name="24. Ganondorf &quot;Ha!&quot; SFX" map="program"/>
+        <item index="37" name="25. Flare Dancer SFX?" map="program"/>
+        <item index="38" name="26. Splash SFX" map="program"/>
+        <item index="39" name="27. Splish SFX (Footstep on Watery Surface)"
+              map="program"/>
+        <item index="40" name="28. Mid: Boulder Explosion SFX, High: Lava Bubbling SFX"
+              map="program"/>
+        <item index="41" name="29. Unknown Monster Roar SFX (King Dodongo/Volvagia?)"
+              map="program"/>
+        <item index="42" name="2A. Mid: Redead/Gibdo SFX (Pamela's Father in MM), High: Goron Falling Asleep SFX"
+              map="program"/>
+        <item index="43" name="2B. Poe Laugh SFX (SM64 Boo)" map="program"/>
+        <item index="44" name="2C. Water Bubbling SFX (Morpha Cutscene?)" map="program"/>
+        <item index="45" name="2D. Mid: Unknown Growl SFX, High: Poe Defeat Shriek SFX"
+              map="program"/>
+        <item index="46" name="2E. Mid: Goron &quot;Hmm?&quot; SFX, High: Goron &quot;Ooooh...&quot; SFX"
+              map="program"/>
+        <item index="47" name="2F. Mid: Metal Clink SFX, High: Leever SFX? (Sandy Sound)"
+              map="program"/>
+        <item index="48" name="30. Mid: Bongo Bongo Drum Hit SFX, High: Unknown Voice SFX"
+              map="program"/>
+        <item index="49" name="31. Mid: Wolfos Howl, High: Guay Caw SFX" map="program"/>
+        <item index="50" name="32. Mid: Witch Argument SFX, High: Metal Clank SFX (Iron Knuckle?)"
+              map="program"/>
+      </instruments>
+    </indexentry>
+    <indexentry index="2" name="Nature Sounds">
+      <instruments>
+        <item index="0" name="01. Bird Chirp SFX 1" map="program" program="0"
+              transpose="0"/>
+        <item index="1" name="02. Bird Chitter SFX" map="program"/>
+        <item index="2" name="03. Bird Trill SFX" map="program"/>
+        <item index="3" name="04. Bird Song SFX" map="program"/>
+        <item index="4" name="05. Bird Chirp SFX 2" map="program"/>
+        <item index="5" name="05. Crow Caw SFX" map="program"/>
+        <item index="6" name="07. Swamp Bird SFX (Some type of honking bird)"
+              map="program"/>
+        <item index="7" name="08. Peacock SFX?" map="program"/>
+        <item index="8" name="09. Bird Twitter SFX" map="program"/>
+        <item index="9" name="0A. Rooster Crow SFX" map="program"/>
+        <item index="10" name="0B. Owl Hoot SFX" map="program"/>
+        <item index="11" name="0C. Eagle SFX" map="program"/>
+        <item index="12" name="0D. Bird Chirp SFX 3" map="program"/>
+        <item index="13" name="0E. Guay Caw SFX" map="program"/>
+        <item index="14" name="0F. White Noise SFX (Waterfall)" map="program"/>
+        <item index="15" name="10. Wind SFX (Haunted Wasteland Sandstorm)"
+              map="program"/>
+        <item index="16" name="11. Wind SFX 2 (Haunted Wasteland Sandstorm)"
+              map="program"/>
+        <item index="17" name="12. Rain SFX" map="program"/>
+        <item index="18" name="13. Thunder SFX" map="program"/>
+        <item index="19" name="14. Thunder SFX 2" map="program"/>
+      </instruments>
+    </indexentry>
+    <indexentry index="3" name="Main Orchestra">
+      <instruments>
+        <item index="0" name="Piccolo" map="program" program="72" transpose="12"/>
+        <item index="1" name="Oboe" map="program" program="68" transpose="0"/>
+        <item index="2" name="Clarinet" map="program" program="71"/>
+        <item index="3" name="Bassoon" map="program" program="70"/>
+        <item index="4" name="Horn" map="program" program="60"/>
+        <item index="5" name="Trumpet" map="program" program="56"/>
+        <item index="6" name="Trombone" map="program" program="57"/>
+        <item index="7" name="Tuba" map="program" program="58"/>
+        <item index="8" name="Glockenspiel" map="program" program="9" transpose="12"/>
+        <item index="9" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="10" name="Strings" map="program" program="48"/>
+        <item index="11" name="Pizz. Strings" map="program" program="45" transpose="0"/>
+        <item index="12" name="Piano" map="program" program="1" transpose="0"/>
+        <item index="13" name="Harp" map="program" program="46"/>
+        <item index="14" name="Marimba" map="program" program="12"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Timpani Low [1]"/>
+        <item index="1" name="Timpani Low [2]"/>
+        <item index="2" name="Timpani Low [3]"/>
+        <item index="3" name="Timpani Low [4]"/>
+        <item index="4" name="Timpani Low [5]"/>
+        <item index="5" name="Timpani Low [6]"/>
+        <item index="6" name="Timpani Low [7]"/>
+        <item index="7" name="Timpani Low [8]"/>
+        <item index="8" name="Timpani Low [9]"/>
+        <item index="9" name="Timpani Low [10]"/>
+        <item index="10" name="Timpani Low [11]"/>
+        <item index="11" name="Timpani Low [12]"/>
+        <item index="12" name="Timpani Low [13]"/>
+        <item index="13" name="Timpani Low [14]"/>
+        <item index="14" name="Timpani Low [15]"/>
+        <item index="15" name="Timpani Low [16]"/>
+        <item index="16" name="Orchestra Snare Low [1]"/>
+        <item index="17" name="Orchestra Snare Low [2]"/>
+        <item index="18" name="Orchestra Snare High [1]"/>
+        <item index="19" name="Orchestra Snare High [2]"/>
+        <item index="20" name="Orchestra Snare High [2]"/>
+        <item index="21" name="Ochestra Crash [1]"/>
+        <item index="22" name="Ochestra Crash [2]"/>
+        <item index="23" name="Ochestra Crash [3]"/>
+        <item index="24" name="Ochestra Crash [4]"/>
+        <item index="25" name="Ochestra Crash [5]"/>
+        <item index="26" name="Ochestra Crash [6]"/>
+        <item index="27" name="Ochestra Crash [7]"/>
+        <item index="28" name="Ochestra Crash [8]"/>
+        <item index="29" name="Ochestra Crash [9]"/>
+        <item index="30" name="Ochestra Crash [10]"/>
+        <item index="31" name="Ochestra Crash [11]"/>
+        <item index="32" name="Ochestra Crash [12]"/>
+        <item index="33" name="Timpani High [1]"/>
+        <item index="34" name="Timpani High [2]"/>
+        <item index="35" name="Timpani High [3]"/>
+        <item index="36" name="Timpani High [4]"/>
+        <item index="37" name="Timpani High [5]"/>
+        <item index="38" name="Timpani High [6]"/>
+        <item index="39" name="Timpani High [7]"/>
+        <item index="40" name="Timpani High [8]"/>
+        <item index="41" name="Timpani High [9]"/>
+        <item index="42" name="Timpani High [10]"/>
+        <item index="43" name="Timpani High [11]"/>
+        <item index="44" name="Timpani High [12]"/>
+        <item index="45" name="Timpani High [13]"/>
+        <item index="46" name="Timpani High [14]"/>
+        <item index="47" name="Timpani High [15]"/>
+        <item index="48" name="Timpani High [16]"/>
+        <item index="49" name="Timpani High [17]"/>
+        <item index="50" name="Timpani High [18]"/>
+        <item index="51" name="Timpani High [19]"/>
+        <item index="52" name="Timpani High [20]"/>
+        <item index="53" name="Timpani High [21]"/>
+        <item index="54" name="Timpani High [22]"/>
+        <item index="55" name="Timpani High [23]"/>
+        <item index="56" name="Timpani High [24]"/>
+        <item index="57" name="Timpani High [25]"/>
+        <item index="58" name="Timpani High [26]"/>
+        <item index="59" name="Timpani High [27]"/>
+        <item index="60" name="Timpani High [28]"/>
+        <item index="61" name="Timpani High [29]"/>
+        <item index="62" name="Timpani High [30]"/>
+        <item index="63" name="Timpani High [31]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Glockenspiel Env."/>
+        <item index="2" name="Strings Env."/>
+        <item index="3" name="Pizz. Strings Env."/>
+        <item index="4" name="Piano Env."/>
+        <item index="5" name="Harp Env."/>
+        <item index="6" name="Marimba Env."/>
+        <item index="7" name="Orchestra Kit Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Piccolo Mid"/>
+        <item index="1" name="Oboe Mid"/>
+        <item index="2" name="Clarinet Mid"/>
+        <item index="3" name="Bassoon Mid"/>
+        <item index="4" name="Horn Mid"/>
+        <item index="5" name="Trumpet Mid"/>
+        <item index="6" name="Trombone Mid"/>
+        <item index="7" name="Tuba Mid"/>
+        <item index="8" name="Glockenspiel Mid"/>
+        <item index="9" name="Strings Low"/>
+        <item index="10" name="Strings Mid"/>
+        <item index="11" name="Strings High"/>
+        <item index="12" name="Pizz. Strings Mid"/>
+        <item index="13" name="Pizz. Strings High"/>
+        <item index="14" name="Piano Low"/>
+        <item index="15" name="Piano Mid"/>
+        <item index="16" name="Piano High"/>
+        <item index="17" name="Harp Mid"/>
+        <item index="18" name="Harp High"/>
+        <item index="19" name="Marimba Mid"/>
+        <item index="20" name="Marimba High"/>
+        <item index="21" name="Timpani Low"/>
+        <item index="22" name="Orchestra Snare Low"/>
+        <item index="23" name="Orchestra Snare High"/>
+        <item index="24" name="Orchestra Crash"/>
+        <item index="25" name="Timpani High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Piccolo Mid Book"/>
+        <item index="1" name="Oboe Mid Book"/>
+        <item index="2" name="Clarinet Mid Book"/>
+        <item index="3" name="Bassoon Mid Book"/>
+        <item index="4" name="Horn Mid Book"/>
+        <item index="5" name="Trumpet Mid Book"/>
+        <item index="6" name="Trombone Mid Book"/>
+        <item index="7" name="Tuba Mid Book"/>
+        <item index="8" name="Glockenspiel Mid Book"/>
+        <item index="9" name="Strings Low Book"/>
+        <item index="10" name="Strings Mid Book"/>
+        <item index="11" name="Strings High Book"/>
+        <item index="12" name="Pizz. Strings Mid Book"/>
+        <item index="13" name="Pizz. Strings High Book"/>
+        <item index="14" name="Piano Low Book"/>
+        <item index="15" name="Piano Mid Book"/>
+        <item index="16" name="Piano High Book"/>
+        <item index="17" name="Harp Mid Book"/>
+        <item index="18" name="Harp High Book"/>
+        <item index="19" name="Marimba Mid Book"/>
+        <item index="20" name="Marimba High Book"/>
+        <item index="21" name="Timpani Low Book"/>
+        <item index="22" name="Orchestra Snare Low Book"/>
+        <item index="23" name="Orchestra Snare High Book"/>
+        <item index="24" name="Orchestra Crash Book"/>
+        <item index="25" name="Timpani High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Piccolo Loop"/>
+        <item index="1" name="Oboe Loop"/>
+        <item index="2" name="Clarinet Loop"/>
+        <item index="3" name="Bassoon Loop"/>
+        <item index="4" name="Horn Loop"/>
+        <item index="5" name="Trumpet Loop"/>
+        <item index="6" name="Trombone Loop"/>
+        <item index="7" name="Tuba Loop"/>
+        <item index="8" name="Glockenspiel Loop"/>
+        <item index="9" name="Strings Low Loop"/>
+        <item index="10" name="Strings Mid Loop"/>
+        <item index="11" name="Strings High Loop"/>
+        <item index="12" name="Pizz. Strings Mid Loop"/>
+        <item index="13" name="Pizz Strings High Loop"/>
+        <item index="14" name="Piano Low Loop"/>
+        <item index="15" name="Piano Mid Loop"/>
+        <item index="16" name="Piano High Loop"/>
+        <item index="17" name="Harp Mid Loop"/>
+        <item index="18" name="Harp High Loop"/>
+        <item index="19" name="Marimba Mid Loop"/>
+        <item index="20" name="Marimba High Loop"/>
+        <item index="21" name="Timpani Low Loop"/>
+        <item index="22" name="Snare Low Loop"/>
+        <item index="23" name="Snare High Loop"/>
+        <item index="24" name="Orchestra Crash Loop"/>
+        <item index="25" name="Timpani High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="4" name="Deku Tree">
+      <instruments>
+        <item index="0" name="Enigmatic" map="program" program="89" transpose="0"/>
+        <item index="1" name="Enigmatic ALT" map="program" program="89"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Enigmatic Env."/>
+        <item index="1" name="Enigmatic ALT Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Enigmatic Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Enigmatic Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Enigmatic Mid Book"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="5" name="Hylian Troupe">
+      <instruments>
+        <item index="0" name="Dulcimer" map="program" program="107" transpose="0"/>
+        <item index="1" name="Ocarina" map="program" program="79" transpose="12"/>
+        <item index="2" name="Bassoon" map="program" program="70" transpose="0"/>
+        <item index="3" name="Oboe" map="program" program="68"/>
+        <item index="4" name="Pizz. Strings" map="program" program="45"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Tambourine Slap [1]"/>
+        <item index="1" name="Tambourine Slap [2]"/>
+        <item index="2" name="Tambourine Slap [3]"/>
+        <item index="3" name="Tambourine Slap [4]"/>
+        <item index="4" name="Tambourine Slap [5]"/>
+        <item index="5" name="Tambourine Slap [6]"/>
+        <item index="6" name="Tambourine Slap [7]"/>
+        <item index="7" name="Tambourine Slap [8]"/>
+        <item index="8" name="Tambourine Slap [9]"/>
+        <item index="9" name="Tambourine Slap [10]"/>
+        <item index="10" name="Tambourine Slap [11]"/>
+        <item index="11" name="Tambourine Slap [12]"/>
+        <item index="12" name="Tambourine Slap [13]"/>
+        <item index="13" name="Tambourine Slap [14]"/>
+        <item index="14" name="Tambourine Slap [15]"/>
+        <item index="15" name="Tambourine Slap [16]"/>
+        <item index="16" name="Tambourine Slap [17]"/>
+        <item index="17" name="Tambourine Slap [18]"/>
+        <item index="18" name="Tambourine Slap [19]"/>
+        <item index="19" name="Tambourine Slap [20]"/>
+        <item index="20" name="Tambourine Slap [21]"/>
+        <item index="21" name="Tambourine Slap [22]"/>
+        <item index="22" name="Tambourine Slap [23]"/>
+        <item index="23" name="Tambourine Slap [24]"/>
+        <item index="24" name="Tambourine Slap [25]"/>
+        <item index="25" name="Tambourine Slap [26]"/>
+        <item index="26" name="Tambourine Slap [27]"/>
+        <item index="27" name="Tambourine Tap [1]"/>
+        <item index="28" name="Tambourine Tap [2]"/>
+        <item index="29" name="Tambourine Shake [1]"/>
+        <item index="30" name="Tambourine Shake [2]"/>
+        <item index="31" name="Tambourine Shake [3]"/>
+        <item index="32" name="Tambourine Shake [4]"/>
+        <item index="33" name="Tambourine Shake [5]"/>
+        <item index="34" name="Tambourine Shake [6]"/>
+        <item index="35" name="Tambourine Shake [7]"/>
+        <item index="36" name="Tambourine Shake [8]"/>
+        <item index="37" name="Tambourine Shake [9]"/>
+        <item index="38" name="Tambourine Shake [10]"/>
+        <item index="39" name="Tambourine Shake [11]"/>
+        <item index="40" name="Tambourine Shake [12]"/>
+        <item index="41" name="Tambourine Shake [13]"/>
+        <item index="42" name="Tambourine Shake [14]"/>
+        <item index="43" name="Tambourine Shake [15]"/>
+        <item index="44" name="Tambourine Shake [16]"/>
+        <item index="45" name="Tambourine Shake [17]"/>
+        <item index="46" name="Tambourine Shake [18]"/>
+        <item index="47" name="Tambourine Shake [19]"/>
+        <item index="48" name="Tambourine Shake [20]"/>
+        <item index="49" name="Tambourine Shake [21]"/>
+        <item index="50" name="Tambourine Shake [22]"/>
+        <item index="51" name="Tambourine Shake [23]"/>
+        <item index="52" name="Tambourine Shake [24]"/>
+        <item index="53" name="Tambourine Shake [25]"/>
+        <item index="54" name="Tambourine Shake [25*]"/>
+        <item index="55" name="Tambourine Shake [25*]"/>
+        <item index="56" name="Tambourine Shake [25*]"/>
+        <item index="57" name="Tambourine Shake [25*]"/>
+        <item index="58" name="Tambourine Shake [25*]"/>
+        <item index="59" name="Tambourine Shake [25*]"/>
+        <item index="60" name="Tambourine Shake [25*]"/>
+        <item index="61" name="Tambourine Shake [25*]"/>
+        <item index="62" name="Tambourine Shake [25*]"/>
+        <item index="63" name="Tambourine Shake [25*]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Dulcimer Env."/>
+        <item index="1" name="Ocarina Env."/>
+        <item index="2" name="General Use Env."/>
+        <item index="3" name="Pizz. Strings Env."/>
+        <item index="4" name="Tambourine Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Dulcimer Low"/>
+        <item index="1" name="Dulcimer Mid"/>
+        <item index="2" name="Ocarina Mid"/>
+        <item index="3" name="Bassoon Mid"/>
+        <item index="4" name="Oboe Mid"/>
+        <item index="5" name="Pizz. Strings Mid"/>
+        <item index="6" name="Pizz. Strings High"/>
+        <item index="7" name="Tambourine Slap"/>
+        <item index="8" name="Tambourine Tap"/>
+        <item index="9" name="Tambourine Shake"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Dulcimer Low Book"/>
+        <item index="1" name="Dulcimer Mid Book"/>
+        <item index="2" name="Ocarina Mid Book"/>
+        <item index="3" name="Bassoon Mid Book"/>
+        <item index="4" name="Oboe Mid Book"/>
+        <item index="5" name="Pizz. Strings Mid Book"/>
+        <item index="6" name="Pizz. Strings High Book"/>
+        <item index="7" name="Tambourine Slap &amp; Shake Book"/>
+        <item index="8" name="Tambourine Tap Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Dulcimer Low Loop"/>
+        <item index="1" name="Dulcimer Mid Loop"/>
+        <item index="2" name="Ocarina Mid Loop"/>
+        <item index="3" name="Bassoon Mid Loop"/>
+        <item index="4" name="Oboe Mid Loop"/>
+        <item index="5" name="Pizz. Strings Mid Loop"/>
+        <item index="6" name="Pizz. Strings High Loop"/>
+        <item index="7" name="Tambourine Slap Loop"/>
+        <item index="8" name="Tambourine Tap Loop"/>
+        <item index="9" name="Tambourine Shake Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="6" name="Title Screen">
+      <instruments>
+        <item index="0" name="Ocarina" map="program" program="79" transpose="12"/>
+        <item index="1" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="2" name="Strings" map="program" program="48"/>
+        <item index="3" name="Piano" map="program" program="1"/>
+        <item index="4" name="Piano ALT" map="program" program="1"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Ocarina Env."/>
+        <item index="1" name="Strings Env."/>
+        <item index="2" name="Piano Env."/>
+        <item index="3" name="Piano ALT Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Ocarina Mid"/>
+        <item index="1" name="Strings Low"/>
+        <item index="2" name="Strings Mid"/>
+        <item index="3" name="Strings High"/>
+        <item index="4" name="Piano Low"/>
+        <item index="5" name="Piano Mid"/>
+        <item index="6" name="Piano High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Ocarina Mid Book"/>
+        <item index="1" name="Strings Low Book"/>
+        <item index="2" name="Strings Mid Book"/>
+        <item index="3" name="Strings High Book"/>
+        <item index="4" name="Piano Low Book"/>
+        <item index="5" name="Piano Mid Book"/>
+        <item index="6" name="Piano High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Ocarina Mid Loop"/>
+        <item index="1" name="Strings Low Loop"/>
+        <item index="2" name="Strings Mid Loop"/>
+        <item index="3" name="Strings High Loop"/>
+        <item index="4" name="Piano Low Loop"/>
+        <item index="5" name="Piano Mid Loop"/>
+        <item index="6" name="Piano High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="7" name="Jabu-Jabu's Belly">
+      <instruments>
+        <item index="0" name="Wind" map="program" program="122" transpose="0"/>
+        <item index="1" name="Synth Strings" map="program" program="50"/>
+        <item index="2" name="Crunched SM64 Bowser Roar" map="program" program="117"/>
+        <item index="3" name="Crunched SM64 Bowser Roar" map="program" program="116"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Trip Hopping Kick [1]"/>
+        <item index="1" name="Trip Hopping Kick [2]"/>
+        <item index="2" name="Trip Hopping Kick [3]"/>
+        <item index="3" name="Trip Hopping Kick [4]"/>
+        <item index="4" name="Trip Hopping Kick [5]"/>
+        <item index="5" name="Trip Hopping Kick [6]"/>
+        <item index="6" name="Trip Hopping Kick [7]"/>
+        <item index="7" name="Trip Hopping Kick [8]"/>
+        <item index="8" name="Trip Hopping Kick [9]"/>
+        <item index="9" name="Trip Hopping Kick [10]"/>
+        <item index="10" name="Trip Hopping Kick [11]"/>
+        <item index="11" name="Trip Hopping Kick [12]"/>
+        <item index="12" name="Trip Hopping Kick [13]"/>
+        <item index="13" name="Trip Hopping Kick [14]"/>
+        <item index="14" name="Trip Hopping Kick [15]"/>
+        <item index="15" name="Trip Hopping Kick [16]"/>
+        <item index="16" name="Trip Hopping Kick [17]"/>
+        <item index="17" name="Trip Hopping Snare [1]"/>
+        <item index="18" name="Trip Hopping Snare [2]"/>
+        <item index="19" name="Trip Hopping Snare [3]"/>
+        <item index="20" name="Trip Hopping Snare [4]"/>
+        <item index="21" name="Trip Hopping Snare [5]"/>
+        <item index="22" name="Trip Hopping Snare [6]"/>
+        <item index="23" name="Trip Hopping Snare [7]"/>
+        <item index="24" name="Trip Hopping Snare [8]"/>
+        <item index="25" name="Trip Hopping Snare [9]"/>
+        <item index="26" name="Trip Hopping Snare [11]"/>
+        <item index="27" name="Trip Hopping Snare [12]"/>
+        <item index="28" name="Trip Hopping Snare [13]"/>
+        <item index="29" name="Trip Hopping Snare [14]"/>
+        <item index="30" name="Trip Hopping Snare [15]"/>
+        <item index="31" name="Trip Hopping Snare [16]"/>
+        <item index="32" name="Trip Hopping Snare [17]"/>
+        <item index="33" name="Trip Hopping Snare [18]"/>
+        <item index="34" name="Trip Hopping Snare [19]"/>
+        <item index="35" name="Trip Hopping Snare [20]"/>
+        <item index="36" name="Trip Hopping Snare [21]"/>
+        <item index="37" name="Trip Hopping Snare [22]"/>
+        <item index="38" name="Trip Hopping Snare [23]"/>
+        <item index="39" name="Trip Hopping Snare [24]"/>
+        <item index="40" name="Trip Hopping Snare [25]"/>
+        <item index="41" name="Trip Hopping Snare [26]"/>
+        <item index="42" name="Trip Hopping Snare [27]"/>
+        <item index="43" name="Trip Hopping Snare [28]"/>
+        <item index="44" name="Trip Hopping Snare [29]"/>
+        <item index="45" name="Trip Hopping Snare [30]"/>
+        <item index="46" name="Trip Hopping Snare [31]"/>
+        <item index="47" name="Trip Hopping Snare [32]"/>
+        <item index="48" name="Trip Hopping Snare [33]"/>
+        <item index="49" name="Trip Hopping Snare [34]"/>
+        <item index="50" name="Trip Hopping Snare [35]"/>
+        <item index="51" name="Trip Hopping Snare [36]"/>
+        <item index="52" name="Trip Hopping Snare [37]"/>
+        <item index="53" name="Trip Hopping Snare [38]"/>
+        <item index="54" name="Trip Hopping Snare [39]"/>
+        <item index="55" name="Trip Hopping Snare [40]"/>
+        <item index="56" name="Trip Hopping Snare [41]"/>
+        <item index="57" name="Trip Hopping Snare [42]"/>
+        <item index="58" name="Trip Hopping Snare [43]"/>
+        <item index="59" name="Trip Hopping Snare [44]"/>
+        <item index="60" name="Trip Hopping Snare [45]"/>
+        <item index="61" name="Trip Hopping Snare [46]"/>
+        <item index="62" name="Trip Hopping Snare [47]"/>
+        <item index="63" name="Trip Hopping Snare [48]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Synth Strings Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Wind Mid"/>
+        <item index="1" name="Synth Strings Mid"/>
+        <item index="2" name="Crunched SM64 Bowser Roar Mid"/>
+        <item index="3" name="Trip Hopping Kick"/>
+        <item index="4" name="Trip Hopping Snare"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Wind Mid Book"/>
+        <item index="1" name="Synth Strings Mid Book"/>
+        <item index="2" name="Crunched SM64 Bowser Roar Mid Book"/>
+        <item index="3" name="Trip Hopping Kick Book"/>
+        <item index="4" name="Trip Hopping Snare Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Wind Mid Loop"/>
+        <item index="1" name="Synth Strings Mid Loop"/>
+        <item index="2" name="Crunched SM64 Bowser Roar Mid Loop"/>
+        <item index="3" name="Trip Hopping Kick Loop"/>
+        <item index="4" name="Trip Hopping Snare Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="8" name="Kakariko Village (Guitar)">
+      <instruments>
+        <item index="0" name="Harmonica" map="program" program="22" transpose="0"/>
+        <item index="1" name="Guitar (Release: 233)" map="program" program="24"/>
+        <item index="2" name="Guitar (Release: 234)" map="program" program="24"/>
+        <item index="3" name="Ocarina" map="program" program="79" transpose="12"/>
+        <item index="4" name="Glockenspiel" map="program" program="9" transpose="12"/>
+        <item index="5" name="Accordion" map="program" program="21" transpose="0"/>
+        <item index="6" name="Accordion" map="program" program="21"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Tambourine Slap [1]"/>
+        <item index="1" name="Tambourine Slap [2]"/>
+        <item index="2" name="Tambourine Slap [3]"/>
+        <item index="3" name="Tambourine Slap [4]"/>
+        <item index="4" name="Tambourine Slap [5]"/>
+        <item index="5" name="Tambourine Slap [6]"/>
+        <item index="6" name="Tambourine Slap [7]"/>
+        <item index="7" name="Tambourine Slap [8]"/>
+        <item index="8" name="Tambourine Slap [9]"/>
+        <item index="9" name="Tambourine Slap [10]"/>
+        <item index="10" name="Tambourine Slap [11]"/>
+        <item index="11" name="Tambourine Slap [12]"/>
+        <item index="12" name="Tambourine Slap [13]"/>
+        <item index="13" name="Tambourine Slap [14]"/>
+        <item index="14" name="Tambourine Slap [15]"/>
+        <item index="15" name="Tambourine Slap [16]"/>
+        <item index="16" name="Tambourine Slap [17]"/>
+        <item index="17" name="Tambourine Slap [18]"/>
+        <item index="18" name="Tambourine Slap [19]"/>
+        <item index="19" name="Tambourine Slap [20]"/>
+        <item index="20" name="Tambourine Slap [21]"/>
+        <item index="21" name="Tambourine Slap [22]"/>
+        <item index="22" name="Tambourine Slap [23]"/>
+        <item index="23" name="Tambourine Slap [24]"/>
+        <item index="24" name="Tambourine Slap [25]"/>
+        <item index="25" name="Tambourine Slap [26]"/>
+        <item index="26" name="Tambourine Slap [27]"/>
+        <item index="27" name="Tambourine Tap [1]"/>
+        <item index="28" name="Tambourine Tap [2]"/>
+        <item index="29" name="Tambourine Shake [1]"/>
+        <item index="30" name="Tambourine Shake [2]"/>
+        <item index="31" name="Tambourine Shake [3]"/>
+        <item index="32" name="Tambourine Shake [4]"/>
+        <item index="33" name="Tambourine Shake [5]"/>
+        <item index="34" name="Tambourine Shake [6]"/>
+        <item index="35" name="Tambourine Shake [7]"/>
+        <item index="36" name="Tambourine Shake [8]"/>
+        <item index="37" name="Tambourine Shake [9]"/>
+        <item index="38" name="Tambourine Shake [10]"/>
+        <item index="39" name="Tambourine Shake [11]"/>
+        <item index="40" name="Tambourine Shake [12]"/>
+        <item index="41" name="Tambourine Shake [13]"/>
+        <item index="42" name="Tambourine Shake [14]"/>
+        <item index="43" name="Tambourine Shake [15]"/>
+        <item index="44" name="Tambourine Shake [16]"/>
+        <item index="45" name="Tambourine Shake [17]"/>
+        <item index="46" name="Tambourine Shake [18]"/>
+        <item index="47" name="Tambourine Shake [19]"/>
+        <item index="48" name="Tambourine Shake [20]"/>
+        <item index="49" name="Tambourine Shake [21]"/>
+        <item index="50" name="Tambourine Shake [22]"/>
+        <item index="51" name="Tambourine Shake [23]"/>
+        <item index="52" name="Tambourine Shake [24]"/>
+        <item index="53" name="Tambourine Shake [25]"/>
+        <item index="54" name="Tambourine Shake [25*]"/>
+        <item index="55" name="Tambourine Shake [25*]"/>
+        <item index="56" name="Tambourine Shake [25*]"/>
+        <item index="57" name="Tambourine Shake [25*]"/>
+        <item index="58" name="Tambourine Shake [25*]"/>
+        <item index="59" name="Tambourine Shake [25*]"/>
+        <item index="60" name="Tambourine Shake [25*]"/>
+        <item index="61" name="Tambourine Shake [25*]"/>
+        <item index="62" name="Tambourine Shake [25*]"/>
+        <item index="63" name="Tambourine Shake [25*]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Harmonica Env."/>
+        <item index="1" name="Guitar Env. (Release: 233)"/>
+        <item index="2" name="Guitar Env. (Release: 234)"/>
+        <item index="3" name="Ocarina Env."/>
+        <item index="4" name="Glockenspiel Env."/>
+        <item index="5" name="Accordion Env."/>
+        <item index="6" name="Tambourine Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Harmonica Mid"/>
+        <item index="1" name="Guitar Mid"/>
+        <item index="2" name="Guitar High"/>
+        <item index="3" name="Ocarina Mid"/>
+        <item index="4" name="Glockenspiel Mid"/>
+        <item index="5" name="Accordion Mid"/>
+        <item index="6" name="Tambourine Slap"/>
+        <item index="7" name="Tambourine Tap"/>
+        <item index="8" name="Tambourine Shake"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Harmonica Mid Book"/>
+        <item index="1" name="Guitar Mid Book"/>
+        <item index="2" name="Guitar High Book"/>
+        <item index="3" name="Ocarina Mid Book"/>
+        <item index="4" name="Glockenspiel Mid Book"/>
+        <item index="5" name="Accordion Mid Book"/>
+        <item index="6" name="Tambourine Slap &amp; Shake Book"/>
+        <item index="7" name="Tambourine Tap Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Harmonica Mid Loop"/>
+        <item index="1" name="Guitar Mid Loop"/>
+        <item index="2" name="Guitar High Loop"/>
+        <item index="3" name="Ocarina Mid Loop"/>
+        <item index="4" name="Glockenspiel Mid Loop"/>
+        <item index="5" name="Accordion Mid Loop"/>
+        <item index="6" name="Tambourine Slap Loop"/>
+        <item index="7" name="Tambourine Tap Loop"/>
+        <item index="8" name="Tambourine Shake Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="9" name="Harp &amp; Strings">
+      <instruments>
+        <item index="0" name="Harp" map="program" program="46" transpose="0"/>
+        <item index="1" name="Harp" map="program" program="46"/>
+        <item index="2" name="Harp" map="program" program="46"/>
+        <item index="3" name="Harp ALT" map="program" program="46" transpose="0"/>
+        <item index="4" name="Strings ALT (High Attack Time)" map="program"
+              program="48" transpose="0"/>
+        <item index="5" name="Ocarina" map="program" program="79" transpose="12"/>
+        <item index="6" name="Male Choir" map="program" program="52" transpose="0"/>
+        <item index="7" name="Male Choir" map="program" program="52" transpose="0"/>
+        <item index="8" name="Glockenspiel" map="program" program="9" transpose="12"/>
+        <item index="9" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="10" name="Strings" map="program" program="48"/>
+        <item index="11" name="Pizz. Strings" map="program" program="45"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Timpani Low [1]"/>
+        <item index="1" name="Timpani Low [2]"/>
+        <item index="2" name="Timpani Low [3]"/>
+        <item index="3" name="Timpani Low [4]"/>
+        <item index="4" name="Timpani Low [5]"/>
+        <item index="5" name="Timpani Low [6]"/>
+        <item index="6" name="Timpani Low [7]"/>
+        <item index="7" name="Timpani Low [8]"/>
+        <item index="8" name="Timpani Low [9]"/>
+        <item index="9" name="Timpani Low [10]"/>
+        <item index="10" name="Timpani Low [11]"/>
+        <item index="11" name="Timpani Low [12]"/>
+        <item index="12" name="Timpani Low [13]"/>
+        <item index="13" name="Timpani Low [14]"/>
+        <item index="14" name="Timpani Low [15]"/>
+        <item index="15" name="Timpani Low [16]"/>
+        <item index="16" name="Orchestra Snare Low [1]"/>
+        <item index="17" name="Orchestra Snare Low [2]"/>
+        <item index="18" name="Orchestra Snare High [1]"/>
+        <item index="19" name="Orchestra Snare High [2]"/>
+        <item index="20" name="Orchestra Snare High [2]"/>
+        <item index="21" name="Ochestra Crash [1]"/>
+        <item index="22" name="Ochestra Crash [2]"/>
+        <item index="23" name="Ochestra Crash [3]"/>
+        <item index="24" name="Ochestra Crash [4]"/>
+        <item index="25" name="Ochestra Crash [5]"/>
+        <item index="26" name="Ochestra Crash [6]"/>
+        <item index="27" name="Ochestra Crash [7]"/>
+        <item index="28" name="Ochestra Crash [8]"/>
+        <item index="29" name="Ochestra Crash [9]"/>
+        <item index="30" name="Ochestra Crash [10]"/>
+        <item index="31" name="Ochestra Crash [11]"/>
+        <item index="32" name="Ochestra Crash [12]"/>
+        <item index="33" name="Timpani High [1]"/>
+        <item index="34" name="Timpani High [2]"/>
+        <item index="35" name="Timpani High [3]"/>
+        <item index="36" name="Timpani High [4]"/>
+        <item index="37" name="Timpani High [5]"/>
+        <item index="38" name="Timpani High [6]"/>
+        <item index="39" name="Timpani High [7]"/>
+        <item index="40" name="Timpani High [8]"/>
+        <item index="41" name="Timpani High [9]"/>
+        <item index="42" name="Timpani High [10]"/>
+        <item index="43" name="Timpani High [11]"/>
+        <item index="44" name="Timpani High [12]"/>
+        <item index="45" name="Timpani High [13]"/>
+        <item index="46" name="Timpani High [14]"/>
+        <item index="47" name="Timpani High [15]"/>
+        <item index="48" name="Timpani High [16]"/>
+        <item index="49" name="Timpani High [17]"/>
+        <item index="50" name="Timpani High [18]"/>
+        <item index="51" name="Timpani High [19]"/>
+        <item index="52" name="Timpani High [20]"/>
+        <item index="53" name="Timpani High [21]"/>
+        <item index="54" name="Timpani High [22]"/>
+        <item index="55" name="Timpani High [23]"/>
+        <item index="56" name="Timpani High [24]"/>
+        <item index="57" name="Timpani High [25]"/>
+        <item index="58" name="Timpani High [26]"/>
+        <item index="59" name="Timpani High [27]"/>
+        <item index="60" name="Timpani High [28]"/>
+        <item index="61" name="Timpani High [29]"/>
+        <item index="62" name="Timpani High [30]"/>
+        <item index="63" name="Timpani High [31]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Harp Env."/>
+        <item index="1" name="Strings ALT Env."/>
+        <item index="2" name="Ocarina Env."/>
+        <item index="3" name="Male Choir Env."/>
+        <item index="4" name="Glockenspiel Env."/>
+        <item index="5" name="Strings Env."/>
+        <item index="6" name="Pizz. Strings Env."/>
+        <item index="7" name="Orchestra Kit Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Harp Mid"/>
+        <item index="1" name="Harp High"/>
+        <item index="2" name="Strings Low"/>
+        <item index="3" name="Strings Mid"/>
+        <item index="4" name="Strings High"/>
+        <item index="5" name="Ocarina Mid"/>
+        <item index="6" name="Male Choir Low"/>
+        <item index="7" name="Male Choir Mid"/>
+        <item index="8" name="Glockenspiel Mid"/>
+        <item index="9" name="Pizz. Strings Mid"/>
+        <item index="10" name="Pizz. Strings High"/>
+        <item index="11" name="Timpani Low"/>
+        <item index="12" name="Orchestra Snare Low"/>
+        <item index="13" name="Orchestra Snare High"/>
+        <item index="14" name="Orchestra Crash"/>
+        <item index="15" name="Timpani High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Harp Mid Book"/>
+        <item index="1" name="Harp High Book"/>
+        <item index="2" name="Strings Low Book"/>
+        <item index="3" name="Strings Mid Book"/>
+        <item index="4" name="Strings High Book"/>
+        <item index="5" name="Ocarina Mid Book"/>
+        <item index="6" name="Male Choir Low Book"/>
+        <item index="7" name="Male Choir Mid Book"/>
+        <item index="8" name="Glockenspiel Mid Book"/>
+        <item index="9" name="Pizz. Strings Mid Book"/>
+        <item index="10" name="Pizz. Strings High Book"/>
+        <item index="11" name="Timpani Low Book"/>
+        <item index="12" name="Orchestra Snare Low Book"/>
+        <item index="13" name="Orchestra Snare High Book"/>
+        <item index="14" name="Orchestra Crash Book"/>
+        <item index="15" name="Timpani High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Harp Mid Loop"/>
+        <item index="1" name="Harp High Loop"/>
+        <item index="2" name="Strings Low Loop"/>
+        <item index="3" name="Strings Mid Loop"/>
+        <item index="4" name="Strings High Loop"/>
+        <item index="5" name="Ocarina Mid Loop"/>
+        <item index="6" name="Male Choir Low Loop"/>
+        <item index="7" name="Male Choir Mid Loop"/>
+        <item index="8" name="Glockenspiel Mid Loop"/>
+        <item index="9" name="Pizz. Strings Mid Loop"/>
+        <item index="10" name="Pizz. Strings High Loop"/>
+        <item index="11" name="Timpani Low Loop"/>
+        <item index="12" name="Orchestra Snare Low Loop"/>
+        <item index="13" name="Orchestra Snare High Loop"/>
+        <item index="14" name="Orchestra Crash Loop"/>
+        <item index="15" name="Timpani High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="10" name="Fire Temple">
+      <instruments>
+        <item index="0" name="Chant 1 &amp; 2" map="program" program="0" transpose="0"/>
+        <item index="1" name="Chant 3" map="program"/>
+        <item index="2" name="Chant 3" map="program"/>
+        <item index="3" name="Bass Marimba" map="program"/>
+        <item index="4" name="Wind" map="program"/>
+        <item index="5" name="Metal Bell" map="program"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Lute &amp; Tambourine Low [1]"/>
+        <item index="1" name="Lute &amp; Tambourine Low [2]"/>
+        <item index="2" name="Lute &amp; Tambourine Low [3]"/>
+        <item index="3" name="Lute &amp; Tambourine Low [4]"/>
+        <item index="4" name="Lute &amp; Tambourine Low [5]"/>
+        <item index="5" name="Lute &amp; Tambourine Low [6]"/>
+        <item index="6" name="Lute &amp; Tambourine Low [7]"/>
+        <item index="7" name="Lute &amp; Tambourine Low [8]"/>
+        <item index="8" name="Lute &amp; Tambourine Low [9]"/>
+        <item index="9" name="Lute &amp; Tambourine Low [10]"/>
+        <item index="10" name="Lute &amp; Tambourine Low [11]"/>
+        <item index="11" name="Lute &amp; Tambourine Low [12]"/>
+        <item index="12" name="Lute &amp; Tambourine Low [13]"/>
+        <item index="13" name="Lute &amp; Tambourine Low [14]"/>
+        <item index="14" name="Lute &amp; Tambourine Low [15]"/>
+        <item index="15" name="Lute &amp; Tambourine Low [16]"/>
+        <item index="16" name="Lute &amp; Tambourine Low [17]"/>
+        <item index="17" name="Lute &amp; Tambourine High [1]"/>
+        <item index="18" name="Lute &amp; Tambourine High [2]"/>
+        <item index="19" name="Lute &amp; Tambourine High [3]"/>
+        <item index="20" name="Lute &amp; Tambourine High [4]"/>
+        <item index="21" name="Lute &amp; Tambourine High [5]"/>
+        <item index="22" name="Lute &amp; Tambourine High [6]"/>
+        <item index="23" name="Lute &amp; Tambourine High [7]"/>
+        <item index="24" name="Lute &amp; Tambourine High [8]"/>
+        <item index="25" name="Lute &amp; Tambourine High [9]"/>
+        <item index="26" name="Lute &amp; Tambourine High [10]"/>
+        <item index="27" name="Lute &amp; Tambourine High [11]"/>
+        <item index="28" name="Lute &amp; Tambourine High [12]"/>
+        <item index="29" name="Lute &amp; Tambourine High [13]"/>
+        <item index="30" name="Lute &amp; Tambourine High [14]"/>
+        <item index="31" name="Lute &amp; Tambourine High [15]"/>
+        <item index="32" name="Lute &amp; Tambourine High [16]"/>
+        <item index="33" name="Lute &amp; Tambourine High [17]"/>
+        <item index="34" name="Lute &amp; Tambourine High [18]"/>
+        <item index="35" name="Lute &amp; Tambourine High [19]"/>
+        <item index="36" name="Lute &amp; Tambourine High [20]"/>
+        <item index="37" name="Lute &amp; Tambourine High [21]"/>
+        <item index="38" name="Lute &amp; Tambourine High [22]"/>
+        <item index="39" name="Lute &amp; Tambourine High [23]"/>
+        <item index="40" name="Lute &amp; Tambourine High [24]"/>
+        <item index="41" name="Lute &amp; Tambourine High [25]"/>
+        <item index="42" name="Lute &amp; Tambourine High [26]"/>
+        <item index="43" name="Lute &amp; Tambourine High [27]"/>
+        <item index="44" name="Lute &amp; Tambourine High [28]"/>
+        <item index="45" name="Lute &amp; Tambourine High [29]"/>
+        <item index="46" name="Lute &amp; Tambourine High [30]"/>
+        <item index="47" name="Lute &amp; Tambourine High [31]"/>
+        <item index="48" name="Lute &amp; Tambourine High [32]"/>
+        <item index="49" name="Lute &amp; Tambourine High [33]"/>
+        <item index="50" name="Lute &amp; Tambourine High [34]"/>
+        <item index="51" name="Lute &amp; Tambourine High [35]"/>
+        <item index="52" name="Lute &amp; Tambourine High [36]"/>
+        <item index="53" name="Lute &amp; Tambourine High [37]"/>
+        <item index="54" name="Lute &amp; Tambourine High [38]"/>
+        <item index="55" name="Lute &amp; Tambourine High [39]"/>
+        <item index="56" name="Lute &amp; Tambourine High [40]"/>
+        <item index="57" name="Lute &amp; Tambourine High [41]"/>
+        <item index="58" name="Lute &amp; Tambourine High [42]"/>
+        <item index="59" name="Lute &amp; Tambourine High [43]"/>
+        <item index="60" name="Lute &amp; Tambourine High [44]"/>
+        <item index="61" name="Lute &amp; Tambourine High [45]"/>
+        <item index="62" name="Lute &amp; Tambourine High [46]"/>
+        <item index="63" name="Lute &amp; Tambourine High [47]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Chant 3 Env."/>
+        <item index="2" name="Bass Marimba Env."/>
+        <item index="3" name="Metal Bell Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Chant 1 &amp; 2 Low"/>
+        <item index="1" name="Chant 1 &amp; 2 Mid"/>
+        <item index="2" name="Chant 3 Mid"/>
+        <item index="3" name="Bass Marimba Mid"/>
+        <item index="4" name="Wind Mid"/>
+        <item index="5" name="Metal Bell Mid"/>
+        <item index="6" name="Lute &amp; Tambourine Low"/>
+        <item index="7" name="Lute &amp; Tambourine High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Chant 1 &amp; 2 Low Book"/>
+        <item index="1" name="Chant 1 &amp; 2 Mid Book"/>
+        <item index="2" name="Chant 3 Mid Book"/>
+        <item index="3" name="Bass Marimba Mid Book"/>
+        <item index="4" name="Wind Mid Book"/>
+        <item index="5" name="Metal Bell Mid Book"/>
+        <item index="6" name="Lute &amp; Tambourine Low Book"/>
+        <item index="7" name="Lute &amp; Tambourine High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Chant 1 &amp; 2 Low Loop"/>
+        <item index="1" name="Chant 1 &amp; 2 Mid Loop"/>
+        <item index="2" name="Chant 3 Mid Loop"/>
+        <item index="3" name="Bass Marimba Mid Loop"/>
+        <item index="4" name="Wind Mid Loop"/>
+        <item index="5" name="Metal Bell Mid Loop"/>
+        <item index="6" name="Lute &amp; Tambourine Low Loop"/>
+        <item index="7" name="Lute &amp; Tambourine High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="11" name="Dodongo's Cavern">
+      <instruments>
+        <item index="0" name="Wind Roar" map="program" program="122" transpose="0"/>
+        <item index="1" name="Lore Drone &amp; Shine" map="program" program="12"/>
+        <item index="2" name="Metal Grind" map="program" program="121"/>
+        <item index="3" name="Spaceosphere" map="program" program="125"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Wind Roar Env."/>
+        <item index="1" name="Lore Drone &amp; Shine Env."/>
+        <item index="2" name="Metal Grind Env."/>
+        <item index="3" name="Spaceosphere Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Wind Roar Mid"/>
+        <item index="1" name="Lore Drone Low"/>
+        <item index="2" name="Shine Mid"/>
+        <item index="3" name="Metal Grind Mid"/>
+        <item index="4" name="Spaceosphere Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Wind Roar Mid Book"/>
+        <item index="1" name="Lore Drone Low Book"/>
+        <item index="2" name="Shine Mid Book"/>
+        <item index="3" name="Metal Grind Mid Book"/>
+        <item index="4" name="Spaceosphere Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Wind Roar Mid Loop"/>
+        <item index="1" name="Lore Drone Low Loop"/>
+        <item index="2" name="Shine Mid Loop"/>
+        <item index="3" name="Metal Grind Mid Loop"/>
+        <item index="4" name="Spaceosphere Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="12" name="Forest Temple">
+      <instruments>
+        <item index="0" name="Voice Pad" map="program" program="91" transpose="0"/>
+        <item index="1" name="Flute Chant Env." map="program" program="74"
+              transpose="24"/>
+        <item index="2" name="Bamboo Chimes" map="program" program="96" transpose="0"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Voice Pad Env."/>
+        <item index="1" name="Flute Chant Env."/>
+        <item index="2" name="Bamboo Chimes Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Voice Pad Mid"/>
+        <item index="1" name="Flute Chant Low"/>
+        <item index="2" name="Flute Chant Mid"/>
+        <item index="3" name="Flute Chant High"/>
+        <item index="4" name="Bamboo Chimes Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Voice Pad Mid Book"/>
+        <item index="1" name="Flute Chant Low Book"/>
+        <item index="2" name="Flute Chant Mid Book"/>
+        <item index="3" name="Flute Chant High Book"/>
+        <item index="4" name="Bamboo Chimes Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Voice Pad Mid Loop"/>
+        <item index="1" name="Flute Chant Low Loop"/>
+        <item index="2" name="Flute Chant Mid Loop"/>
+        <item index="3" name="Flute Chant High Loop"/>
+        <item index="4" name="Bamboo Chimes Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="13" name="Lon Lon Ranch">
+      <instruments>
+        <item index="0" name="Malon Voice (Release: 248)" map="program" program="85"
+              transpose="0"/>
+        <item index="1" name="Malon Voice (Release: 247)" map="program" program="85"/>
+        <item index="2" name="Sustain Guitar" map="program" program="26" transpose="0"/>
+        <item index="3" name="Sustain Guitar ALT" map="program" program="26"
+              transpose="12"/>
+        <item index="4" name="Sustain Guitar ALT" map="program" program="26"
+              transpose="12"/>
+        <item index="5" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="6" name="Strings" map="program" program="48"/>
+        <item index="7" name="Fiddle" map="program" program="110"/>
+        <item index="8" name="Fiddle" map="program" program="110"/>
+        <item index="9" name="Carillon Bell" map="program" program="14"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Malon Voice Env. (Release: 248)"/>
+        <item index="1" name="Malon Voice Env. (Release: 247)"/>
+        <item index="2" name="Sustain Guitar Env."/>
+        <item index="3" name="Sustain Guitar ALT Env."/>
+        <item index="4" name="Strings Env."/>
+        <item index="5" name="Fiddle Env."/>
+        <item index="6" name="Carillon Bell Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Malon Voice Mid"/>
+        <item index="1" name="Sustain Guitar Low"/>
+        <item index="2" name="Sustain Guitar Mid"/>
+        <item index="3" name="Sustain Guitar High"/>
+        <item index="4" name="Strings Low"/>
+        <item index="5" name="Strings Mid"/>
+        <item index="6" name="Strings High"/>
+        <item index="7" name="Fiddle Mid"/>
+        <item index="8" name="Carillon Bell Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Malon Voice Mid Book"/>
+        <item index="1" name="Sustain Guitar Low Book"/>
+        <item index="2" name="Sustain Guitar Mid Book"/>
+        <item index="3" name="Sustain Guitar High Book"/>
+        <item index="4" name="Strings Low Book"/>
+        <item index="5" name="Strings Mid Book"/>
+        <item index="6" name="Strings High Book"/>
+        <item index="7" name="Fiddle Mid Book"/>
+        <item index="8" name="Carillon Bell Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Malon Voice Mid Loop"/>
+        <item index="1" name="Sustain Guitar Low Loop"/>
+        <item index="2" name="Sustain Guitar Mid Loop"/>
+        <item index="3" name="Sustain Guitar High Loop"/>
+        <item index="4" name="Strings Low Loop"/>
+        <item index="5" name="Strings Mid Loop"/>
+        <item index="6" name="Strings High Loop"/>
+        <item index="7" name="Fiddle Mid Loop"/>
+        <item index="8" name="Carillon Bell Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="14" name="Goron City">
+      <instruments>
+        <item index="0" name="Bent Drum" map="program" program="117" transpose="0"/>
+        <item index="1" name="Conga &amp; Slap" map="program" program="116"
+              transpose="0"/>
+        <item index="2" name="Cuica" map="program" program="114"/>
+        <item index="3" name="Bass Marimba" map="program" program="108"/>
+        <item index="4" name="Bass Marimba" map="program" program="108"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Conga &amp; Slap Env."/>
+        <item index="2" name="Bass Marimba Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Bent Drum Mid"/>
+        <item index="1" name="Conga &amp; Slap Low"/>
+        <item index="2" name="Conga &amp; Slap Mid"/>
+        <item index="3" name="Cuica Low"/>
+        <item index="4" name="Cuica Mid"/>
+        <item index="5" name="Bass Marimba Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Bent Drum Mid Book"/>
+        <item index="1" name="Conga &amp; Slap Low Book"/>
+        <item index="2" name="Conga &amp; Slap Mid Book"/>
+        <item index="3" name="Cuica Low Book"/>
+        <item index="4" name="Cuica Mid Book"/>
+        <item index="5" name="Bass Marimba Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Bent Drum Mid Loop"/>
+        <item index="1" name="Conga &amp; Slap Low Loop"/>
+        <item index="2" name="Conga &amp; Slap Mid Loop"/>
+        <item index="3" name="Cuica Low Loop"/>
+        <item index="4" name="Cuica Mid Loop"/>
+        <item index="5" name="Bass Marimba Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="15" name="Kokiri Forest">
+      <instruments>
+        <item index="0" name="Piccolo" map="program" program="72" transpose="12"/>
+        <item index="1" name="Oboe" map="program" program="68" transpose="0"/>
+        <item index="2" name="Clarinet" map="program" program="71" transpose="0"/>
+        <item index="3" name="Bassoon" map="program" program="70"/>
+        <item index="4" name="Horn" map="program" program="60"/>
+        <item index="5" name="Glockenspiel" map="program" program="9" transpose="12"/>
+        <item index="6" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="7" name="Strings" map="program" program="48"/>
+        <item index="8" name="Pizz. Strings" map="program" program="45"/>
+        <item index="9" name="Harpsichord" map="program" program="6" transpose="12"/>
+        <item index="10" name="Harp" map="program" program="46" transpose="0"/>
+        <item index="11" name="Marimba" map="program" program="12"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Glockenspiel Env."/>
+        <item index="2" name="Strings Env."/>
+        <item index="3" name="Pizz. Strings Env."/>
+        <item index="4" name="Harpsichord Env."/>
+        <item index="5" name="Harp Env."/>
+        <item index="6" name="Marimba Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Piccolo Mid"/>
+        <item index="1" name="Oboe Mid"/>
+        <item index="2" name="Clarinet Mid"/>
+        <item index="3" name="Bassoon Mid"/>
+        <item index="4" name="Horn Mid"/>
+        <item index="5" name="Glockenspiel Mid"/>
+        <item index="6" name="Strings Low"/>
+        <item index="7" name="Strings Mid"/>
+        <item index="8" name="Strings High"/>
+        <item index="9" name="Pizz. Strings Mid"/>
+        <item index="10" name="Pizz. Strings High"/>
+        <item index="11" name="Harpsichord Mid"/>
+        <item index="12" name="Harp Mid"/>
+        <item index="13" name="Harp High"/>
+        <item index="14" name="Marimba Mid"/>
+        <item index="15" name="Marimba High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Piccolo Mid Book"/>
+        <item index="1" name="Oboe Mid Book"/>
+        <item index="2" name="Clarinet Mid Book"/>
+        <item index="3" name="Bassoon Mid Book"/>
+        <item index="4" name="Horn Mid Book"/>
+        <item index="5" name="Glockenspiel Mid Book"/>
+        <item index="6" name="Strings Low Book"/>
+        <item index="7" name="Strings Mid Book"/>
+        <item index="8" name="Strings High Book"/>
+        <item index="9" name="Pizz. Strings Mid Book"/>
+        <item index="10" name="Pizz. Strings High Book"/>
+        <item index="11" name="Harpsichord Mid Book"/>
+        <item index="12" name="Harp Mid Book"/>
+        <item index="13" name="Harp High Book"/>
+        <item index="14" name="Marimba Mid Book"/>
+        <item index="15" name="Marimba High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Piccolo Mid Loop"/>
+        <item index="1" name="Oboe Mid Loop"/>
+        <item index="2" name="Clarinet Mid Loop"/>
+        <item index="3" name="Bassoon Mid Loop"/>
+        <item index="4" name="Horn Mid Loop"/>
+        <item index="5" name="Glockenspiel Mid Loop"/>
+        <item index="6" name="Strings Low Loop"/>
+        <item index="7" name="Strings Mid Loop"/>
+        <item index="8" name="Strings High Loop"/>
+        <item index="9" name="Pizz. Srings Mid Loop"/>
+        <item index="10" name="Pizz. Strings High Loop"/>
+        <item index="11" name="Harpsichord Mid Loop"/>
+        <item index="12" name="Harp Mid Loop"/>
+        <item index="13" name="Harp High Loop"/>
+        <item index="14" name="Marimba Mid Loop"/>
+        <item index="15" name="Marimba High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="16" name="Spirit Temple">
+      <instruments>
+        <item index="0" name="Voice Pad ALT" map="program" program="54" transpose="0"/>
+        <item index="1" name="Synth Strings" map="program" program="50"/>
+        <item index="2" name="Dukduk ALT" map="program" program="111"/>
+        <item index="3" name="Conga &amp; Slap" map="program" program="117"/>
+        <item index="4" name="Synth Strings" map="program" program="50"/>
+        <item index="5" name="Dukduk" map="program" program="111"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Gong [1]"/>
+        <item index="1" name="Gong [2]"/>
+        <item index="2" name="Gong [3]"/>
+        <item index="3" name="Gong [4]"/>
+        <item index="4" name="Gong [5]"/>
+        <item index="5" name="Gong [6]"/>
+        <item index="6" name="Gong [7]"/>
+        <item index="7" name="Gong [8]"/>
+        <item index="8" name="Gong [9]"/>
+        <item index="9" name="Gong [10]"/>
+        <item index="10" name="Gong [11]"/>
+        <item index="11" name="Gong [12]"/>
+        <item index="12" name="Gong [13]"/>
+        <item index="13" name="Gong [14]"/>
+        <item index="14" name="Gong [15]"/>
+        <item index="15" name="Gong [16]"/>
+        <item index="16" name="Gong [17]"/>
+        <item index="17" name="Gong [18]"/>
+        <item index="18" name="Gong [19]"/>
+        <item index="19" name="Gong [20]"/>
+        <item index="20" name="Gong [21]"/>
+        <item index="21" name="Gong [22]"/>
+        <item index="22" name="Gong [23]"/>
+        <item index="23" name="Gong [24]"/>
+        <item index="24" name="Gong [25]"/>
+        <item index="25" name="Gong [26]"/>
+        <item index="26" name="Gong [27]"/>
+        <item index="27" name="Gong [28]"/>
+        <item index="28" name="Gong [29]"/>
+        <item index="29" name="Gong [30]"/>
+        <item index="30" name="Gong [31]"/>
+        <item index="31" name="Gong [32]"/>
+        <item index="32" name="Gong [33]"/>
+        <item index="33" name="Gong [34]"/>
+        <item index="34" name="Chimes [1]"/>
+        <item index="35" name="Chimes [2]"/>
+        <item index="36" name="Chimes [3]"/>
+        <item index="37" name="Chimes [4]"/>
+        <item index="38" name="Chimes [5]"/>
+        <item index="39" name="Chimes [6]"/>
+        <item index="40" name="Chimes [7]"/>
+        <item index="41" name="Chimes [8]"/>
+        <item index="42" name="Chimes [9]"/>
+        <item index="43" name="Chimes [10]"/>
+        <item index="44" name="Chimes [11]"/>
+        <item index="45" name="Chimes [12]"/>
+        <item index="46" name="Chimes [13]"/>
+        <item index="47" name="Chimes [14]"/>
+        <item index="48" name="Chimes [15]"/>
+        <item index="49" name="Chimes [16]"/>
+        <item index="50" name="Chimes [17]"/>
+        <item index="51" name="Chimes [18]"/>
+        <item index="52" name="Chimes [19]"/>
+        <item index="53" name="Chimes [20]"/>
+        <item index="54" name="Chimes [21]"/>
+        <item index="55" name="Chimes [22]"/>
+        <item index="56" name="Chimes [23]"/>
+        <item index="57" name="Chimes [24]"/>
+        <item index="58" name="Chimes [25]"/>
+        <item index="59" name="Chimes [26]"/>
+        <item index="60" name="Chimes [27]"/>
+        <item index="61" name="Chimes [28]"/>
+        <item index="62" name="Chimes [29]"/>
+        <item index="63" name="Chimes [30]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Voice Pad ALT Env."/>
+        <item index="1" name="Synth Strings Env."/>
+        <item index="2" name="Dukduk ALT Env."/>
+        <item index="3" name="Conga &amp; Slap Env."/>
+        <item index="4" name="Dukduk Env."/>
+        <item index="5" name="Gong &amp; Chimes Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Voice Pad Mid"/>
+        <item index="1" name="Synth Strings Mid"/>
+        <item index="2" name="Dukduk Mid"/>
+        <item index="3" name="Conga &amp; Slap Low"/>
+        <item index="4" name="Conga &amp; Slap Mid"/>
+        <item index="5" name="Gong Low"/>
+        <item index="6" name="Chimes Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Voice Pad Mid Book"/>
+        <item index="1" name="Synth Strings Mid Book"/>
+        <item index="2" name="Dukduk Mid Book"/>
+        <item index="3" name="Conga &amp; Slap Low Book"/>
+        <item index="4" name="Conga &amp; Slap Mid Book"/>
+        <item index="5" name="Gong Low Loop"/>
+        <item index="6" name="Chimes Mid Loop"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Voice Pad Mid Loop"/>
+        <item index="1" name="Synth Strings Mid Loop"/>
+        <item index="2" name="Dukduk Mid Loop"/>
+        <item index="3" name="Conga &amp; Slap Low Loop"/>
+        <item index="4" name="Conga &amp; Slap Mid Loop"/>
+        <item index="5" name="Gong Low Loop"/>
+        <item index="6" name="Chimes Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="17" name="Horse Race">
+      <instruments>
+        <item index="0" name="Banjo" map="program" program="105" transpose="0"/>
+        <item index="1" name="Banjo" map="program" program="105"/>
+        <item index="2" name="Pizz. Double Bass" map="program" program="32"/>
+        <item index="3" name="Harmonica" map="program" program="22"/>
+        <item index="4" name="Nylon Guitar" map="program" program="24"/>
+        <item index="5" name="Fiddle" map="program" program="110"/>
+        <item index="6" name="Fiddle" map="program" program="110"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Banjo Env."/>
+        <item index="1" name="General Use Env."/>
+        <item index="2" name="Harmonica Env."/>
+        <item index="3" name="Nylon Guitar Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Banjo Low"/>
+        <item index="1" name="Banjo Mid"/>
+        <item index="2" name="Pizz. Double Bass Mid"/>
+        <item index="3" name="Harmonica Mid"/>
+        <item index="4" name="Nylon Guitar Mid"/>
+        <item index="5" name="Nylon Guitar High"/>
+        <item index="6" name="Fiddle Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Banjo Low Book"/>
+        <item index="1" name="Banjo Mid Book"/>
+        <item index="2" name="Pizz. Double Bass Mid Book"/>
+        <item index="3" name="Harmonica Mid Book"/>
+        <item index="4" name="Nylon Guitar Mid Book"/>
+        <item index="5" name="Nylon Guitar High Book"/>
+        <item index="6" name="Fiddle Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Banjo Low Loop"/>
+        <item index="1" name="Banjo Mid Loop"/>
+        <item index="2" name="Pizz. Double Bass Mid Loop"/>
+        <item index="3" name="Harmonica Mid Loop"/>
+        <item index="4" name="Nylon Guitar Mid Loop"/>
+        <item index="5" name="Nylon Guitar High Loop"/>
+        <item index="6" name="Fiddle Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="18" name="Warp Songs">
+      <instruments>
+        <item index="0" name="Harp" map="program" program="46" transpose="0"/>
+        <item index="1" name="Harp" map="program" program="46"/>
+        <item index="2" name="Strings ALT" map="program" program="48" transpose="0"/>
+        <item index="3" name="Ocarina" map="program" program="79" transpose="12"/>
+        <item index="4" name="Glockenspiel" map="program" program="9" transpose="0"/>
+        <item index="5" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="6" name="Strings" map="program" program="48"/>
+        <item index="7" name="Pizz. Strings" map="program" program="45"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Timpani Low [1]"/>
+        <item index="1" name="Timpani Low [2]"/>
+        <item index="2" name="Timpani Low [3]"/>
+        <item index="3" name="Timpani Low [4]"/>
+        <item index="4" name="Timpani Low [5]"/>
+        <item index="5" name="Timpani Low [6]"/>
+        <item index="6" name="Timpani Low [7]"/>
+        <item index="7" name="Timpani Low [8]"/>
+        <item index="8" name="Timpani Low [9]"/>
+        <item index="9" name="Timpani Low [10]"/>
+        <item index="10" name="Timpani Low [11]"/>
+        <item index="11" name="Timpani Low [12]"/>
+        <item index="12" name="Timpani Low [13]"/>
+        <item index="13" name="Timpani Low [14]"/>
+        <item index="14" name="Timpani Low [15]"/>
+        <item index="15" name="Timpani Low [16]"/>
+        <item index="16" name="Orchestra Snare Low [1]"/>
+        <item index="17" name="Orchestra Snare Low [2]"/>
+        <item index="18" name="Orchestra Snare High [1]"/>
+        <item index="19" name="Orchestra Snare High [2]"/>
+        <item index="20" name="Orchestra Snare High [3]"/>
+        <item index="21" name="Orchestra Crash [1]"/>
+        <item index="22" name="Orchestra Crash [2]"/>
+        <item index="23" name="Orchestra Crash [3]"/>
+        <item index="24" name="Orchestra Crash [4]"/>
+        <item index="25" name="Orchestra Crash [5]"/>
+        <item index="26" name="Orchestra Crash [6]"/>
+        <item index="27" name="Orchestra Crash [7]"/>
+        <item index="28" name="Orchestra Crash [8]"/>
+        <item index="29" name="Orchestra Crash [9]"/>
+        <item index="30" name="Orchestra Crash [10]"/>
+        <item index="31" name="Orchestra Crash [11]"/>
+        <item index="32" name="Orchestra Crash [12]"/>
+        <item index="33" name="Timpani High [1]"/>
+        <item index="34" name="Timpani High [2]"/>
+        <item index="35" name="Timpani High [3]"/>
+        <item index="36" name="Timpani High [4]"/>
+        <item index="37" name="Timpani High [5]"/>
+        <item index="38" name="Timpani High [6]"/>
+        <item index="39" name="Timpani High [7]"/>
+        <item index="40" name="Timpani High [8]"/>
+        <item index="41" name="Timpani High [9]"/>
+        <item index="42" name="Timpani High [10]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Harp Env."/>
+        <item index="1" name="Strings ALT Env."/>
+        <item index="2" name="Ocarina Env."/>
+        <item index="3" name="Glockenspield Env."/>
+        <item index="4" name="Strings Env."/>
+        <item index="5" name="Pizz. Strings Env."/>
+        <item index="6" name="Orchestra Kit Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Harp Mid"/>
+        <item index="1" name="Harp High"/>
+        <item index="2" name="Strings Low"/>
+        <item index="3" name="Strings Mid"/>
+        <item index="4" name="Strings High"/>
+        <item index="5" name="Ocarina Mid"/>
+        <item index="6" name="Glockenspiel Mid"/>
+        <item index="7" name="Pizz. Strings Mid"/>
+        <item index="8" name="Pizz. Strings High"/>
+        <item index="9" name="Timpani Low"/>
+        <item index="10" name="Orchestra Snare Low"/>
+        <item index="11" name="Orchestra Snare High"/>
+        <item index="12" name="Orchestra Crash"/>
+        <item index="13" name="Timpani High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Harp Mid Book"/>
+        <item index="1" name="Harp High Book"/>
+        <item index="2" name="Strings Low Book"/>
+        <item index="3" name="Strings Mid Book"/>
+        <item index="4" name="Strings High Book"/>
+        <item index="5" name="Ocarina Mid Book"/>
+        <item index="6" name="Glockenspield Mid Book"/>
+        <item index="7" name="Pizz. Strings Mid Book"/>
+        <item index="8" name="Pizz. Strings High Book"/>
+        <item index="9" name="Timpani Low Book"/>
+        <item index="10" name="Orchestra Snare Low Book"/>
+        <item index="11" name="Orchestra Snare High Book"/>
+        <item index="12" name="Orchestra Crash Book"/>
+        <item index="13" name="Timpani High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Harp Mid Loop"/>
+        <item index="1" name="Harp High Loop"/>
+        <item index="2" name="Strings Low Loop"/>
+        <item index="3" name="Strings Mid Loop"/>
+        <item index="4" name="Strings High Loop"/>
+        <item index="5" name="Ocarina Mid Loop"/>
+        <item index="6" name="Glockenspiel Mid Loop"/>
+        <item index="7" name="Pizz. Strings Mid Loop"/>
+        <item index="8" name="Pizz. Strings High Loop"/>
+        <item index="9" name="Timpani Low Loop"/>
+        <item index="10" name="Orchestra Snare Low Loop"/>
+        <item index="11" name="Orchestra Snare High Loop"/>
+        <item index="12" name="Orchestra Crash Loop"/>
+        <item index="13" name="Timpani high Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="19" name="Chamber of the Sages">
+      <instruments>
+        <item index="0" name="Female Choir" map="program" program="52" transpose="0"/>
+        <item index="1" name="Female Choir" map="program" program="52" transpose="0"/>
+        <item index="2" name="Harp" map="program" program="46"/>
+        <item index="3" name="Glockenspiel" map="program" program="9" transpose="12"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Female Choir Env."/>
+        <item index="1" name="Harp Env."/>
+        <item index="2" name="Glockenspiel Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Female Choir Mid"/>
+        <item index="1" name="Female Choir High"/>
+        <item index="2" name="Harp Mid"/>
+        <item index="3" name="Harp High"/>
+        <item index="4" name="Glockenspiel Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Female Choir Mid Book"/>
+        <item index="1" name="Femal Choir High Book"/>
+        <item index="2" name="Harp Mid Book"/>
+        <item index="3" name="Harp High Book"/>
+        <item index="4" name="Glockenspiel Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Female Choir Mid Loop"/>
+        <item index="1" name="Female Choir High Loop"/>
+        <item index="2" name="Harp Mid Loop"/>
+        <item index="3" name="Harp High Loop"/>
+        <item index="4" name="Glockenspiel Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="20" name="Minigame Shop">
+      <instruments>
+        <item index="0" name="Piccolo" map="program" program="72" transpose="12"/>
+        <item index="1" name="Clarinet" map="program" program="71" transpose="0"/>
+        <item index="2" name="Clarinet" map="program" program="71"/>
+        <item index="3" name="Accordion" map="program" program="21" transpose="12"/>
+        <item index="4" name="Glockenspiel" map="program" program="9" transpose="12"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Timpani Low [1]"/>
+        <item index="1" name="Timpani Low [2]"/>
+        <item index="2" name="Timpani Low [3]"/>
+        <item index="3" name="Timpani Low [4]"/>
+        <item index="4" name="Timpani Low [5]"/>
+        <item index="5" name="Timpani Low [6]"/>
+        <item index="6" name="Timpani Low [7]"/>
+        <item index="7" name="Timpani Low [8]"/>
+        <item index="8" name="Timpani Low [9]"/>
+        <item index="9" name="Timpani Low [10]"/>
+        <item index="10" name="Timpani Low [11]"/>
+        <item index="11" name="Timpani Low [12]"/>
+        <item index="12" name="Timpani Low [13]"/>
+        <item index="13" name="Timpani Low [14]"/>
+        <item index="14" name="Timpani Low [15]"/>
+        <item index="15" name="Timpani Low [16]"/>
+        <item index="16" name="Orchestra Snare Low [1]"/>
+        <item index="17" name="Orchestra Snare Low [2]"/>
+        <item index="18" name="Orchestra Snare High [1]"/>
+        <item index="19" name="Orchestra Snare High [2]"/>
+        <item index="20" name="Orchestra Snare High [3]"/>
+        <item index="21" name="Orchestra Crash [1]"/>
+        <item index="22" name="Orchestra Crash [2]"/>
+        <item index="23" name="Orchestra Crash [3]"/>
+        <item index="24" name="Orchestra Crash [4]"/>
+        <item index="25" name="Orchestra Crash [5]"/>
+        <item index="26" name="Orchestra Crash [6]"/>
+        <item index="27" name="Orchestra Crash [7]"/>
+        <item index="28" name="Orchestra Crash [8]"/>
+        <item index="29" name="Orchestra Crash [9]"/>
+        <item index="30" name="Orchestra Crash [10]"/>
+        <item index="31" name="Orchestra Crash [11]"/>
+        <item index="32" name="Orchestra Crash [12]"/>
+        <item index="33" name="Timpani High [1]"/>
+        <item index="34" name="Timpani High [2]"/>
+        <item index="35" name="Timpani High [3]"/>
+        <item index="36" name="Timpani High [4]"/>
+        <item index="37" name="Timpani High [5]"/>
+        <item index="38" name="Timpani High [6]"/>
+        <item index="39" name="Timpani High [7]"/>
+        <item index="40" name="Timpani High [8]"/>
+        <item index="41" name="Timpani High [9]"/>
+        <item index="42" name="Timpani High [10]"/>
+        <item index="43" name="Timpani High [11]"/>
+        <item index="44" name="Timpani High [12]"/>
+        <item index="45" name="Timpani High [13]"/>
+        <item index="46" name="Timpani High [14]"/>
+        <item index="47" name="Timpani High [15]"/>
+        <item index="48" name="Timpani High [16]"/>
+        <item index="49" name="Timpani High [17]"/>
+        <item index="50" name="Timpani High [18]"/>
+        <item index="51" name="Timpani High [19]"/>
+        <item index="52" name="Timpani High [20]"/>
+        <item index="53" name="Timpani High [21]"/>
+        <item index="54" name="Timpani High [22]"/>
+        <item index="55" name="Timpani High [23]"/>
+        <item index="56" name="Timpani High [24]"/>
+        <item index="57" name="Timpani High [25]"/>
+        <item index="58" name="Timpani High [26]"/>
+        <item index="59" name="Timpani High [27]"/>
+        <item index="60" name="Timpani High [28]"/>
+        <item index="61" name="Timpani High [29]"/>
+        <item index="62" name="Timpani High [30]"/>
+        <item index="63" name="Timpani High [31]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Accordion Env."/>
+        <item index="2" name="Glockenspiel Env."/>
+        <item index="3" name="Orchestra Kit Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Piccolo Mid"/>
+        <item index="1" name="Clarinet Mid"/>
+        <item index="2" name="Accordion Mid"/>
+        <item index="3" name="Glockenspiel Mid"/>
+        <item index="4" name="Timpani Low"/>
+        <item index="5" name="Orchestra Snare Low"/>
+        <item index="6" name="Orchestra Snare High"/>
+        <item index="7" name="Orchestra Crash"/>
+        <item index="8" name="Timpani High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Piccolo Mid Book"/>
+        <item index="1" name="Clarinet Mid Book"/>
+        <item index="2" name="Accordion Mid Book"/>
+        <item index="3" name="Glockenspiel Mid Book"/>
+        <item index="4" name="Timpani Low Book"/>
+        <item index="5" name="Orchestra Snare Low Book"/>
+        <item index="6" name="Orchestra Snare High Book"/>
+        <item index="7" name="Orchestra Crash Book"/>
+        <item index="8" name="Timpani High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Piccolo Mid Loop"/>
+        <item index="1" name="Clarinet Mid Loop"/>
+        <item index="2" name="Accordion Mid Loop"/>
+        <item index="3" name="Glockenspiel Mid Loop"/>
+        <item index="4" name="Timpani Low  Loop"/>
+        <item index="5" name="Orchestra Snare Low Loop"/>
+        <item index="6" name="Orchestra Snare High Loop"/>
+        <item index="7" name="Orchestra Crash Loop"/>
+        <item index="8" name="Timpani High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="21" name="Zora's Domain">
+      <instruments>
+        <item index="0" name="Steel Drum" map="program" program="114" transpose="0"/>
+        <item index="1" name="Voice Pad" map="program" program="91" transpose="0"/>
+        <item index="2" name="Nylon Guitar" map="program" program="24"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Conga Closed [1]"/>
+        <item index="1" name="Conga Closed [2]"/>
+        <item index="2" name="Conga Closed [3]"/>
+        <item index="3" name="Conga Closed [4]"/>
+        <item index="4" name="Conga Closed [5]"/>
+        <item index="5" name="Conga Closed [6]"/>
+        <item index="6" name="Conga Closed [7]"/>
+        <item index="7" name="Conga Closed [8]"/>
+        <item index="8" name="Conga Closed [9]"/>
+        <item index="9" name="Conga Closed [10]"/>
+        <item index="10" name="Conga Closed [11]"/>
+        <item index="11" name="Conga Closed [12]"/>
+        <item index="12" name="Conga Closed [13]"/>
+        <item index="13" name="Conga Closed [14]"/>
+        <item index="14" name="Conga Closed [15]"/>
+        <item index="15" name="Conga Closed [16]"/>
+        <item index="16" name="Conga Closed [17]"/>
+        <item index="17" name="Conga Closed [18]"/>
+        <item index="18" name="Conga Closed [19]"/>
+        <item index="19" name="Conga Closed [20]"/>
+        <item index="20" name="Conga Closed [21]"/>
+        <item index="21" name="Conga Open [1]"/>
+        <item index="22" name="Conga Open [2]"/>
+        <item index="23" name="Conga Open [3]"/>
+        <item index="24" name="Conga Open [4]"/>
+        <item index="25" name="Conga Open [5]"/>
+        <item index="26" name="Conga Open [6]"/>
+        <item index="27" name="Conga Open [7]"/>
+        <item index="28" name="Conga Open [8]"/>
+        <item index="29" name="Conga Open [9]"/>
+        <item index="30" name="Conga Open [10]"/>
+        <item index="31" name="Conga Open [11]"/>
+        <item index="32" name="Conga Open [12]"/>
+        <item index="33" name="Conga Open [13]"/>
+        <item index="34" name="Conga Open [14]"/>
+        <item index="35" name="Conga Open [15]"/>
+        <item index="36" name="Conga Open [16]"/>
+        <item index="37" name="Conga Open [17]"/>
+        <item index="38" name="Conga Open [18]"/>
+        <item index="39" name="Conga Open [19]"/>
+        <item index="40" name="Conga Slap [20]"/>
+        <item index="41" name="Conga Slap [21]"/>
+        <item index="42" name="Conga Slap [22]"/>
+        <item index="43" name="Conga Slap [23]"/>
+        <item index="44" name="Conga Slap [24]"/>
+        <item index="45" name="Conga Slap [25]"/>
+        <item index="46" name="Conga Slap [26]"/>
+        <item index="47" name="Conga Slap [27]"/>
+        <item index="48" name="Conga Slap [28]"/>
+        <item index="49" name="Conga Slap [29]"/>
+        <item index="50" name="Conga Slap [30]"/>
+        <item index="51" name="Conga Slap [31]"/>
+        <item index="52" name="Conga Slap [32]"/>
+        <item index="53" name="Conga Slap [33]"/>
+        <item index="54" name="Conga Slap [34]"/>
+        <item index="55" name="Conga Slap [35]"/>
+        <item index="56" name="Conga Slap [36]"/>
+        <item index="57" name="Conga Slap [37]"/>
+        <item index="58" name="Conga Slap [38]"/>
+        <item index="59" name="Conga Slap [39]"/>
+        <item index="60" name="Shaker [1]"/>
+        <item index="61" name="Shaker [2]"/>
+        <item index="62" name="Shaker [3]"/>
+        <item index="63" name="Shaker [4]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Steel Drum Env."/>
+        <item index="1" name="Voice Pad Env."/>
+        <item index="2" name="Nylon Guitar Env."/>
+        <item index="3" name="Conga &amp; Shaker Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Steel Drum Mid"/>
+        <item index="1" name="Steel Drum High"/>
+        <item index="2" name="Voice Pad Mid"/>
+        <item index="3" name="Nylon Guitar Mid"/>
+        <item index="4" name="Nylon Guitar High"/>
+        <item index="5" name="Conga Closed"/>
+        <item index="6" name="Conga Open"/>
+        <item index="7" name="Conga Slap"/>
+        <item index="8" name="Shaker Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Steel Drum Mid Book"/>
+        <item index="1" name="Steel Drum High Book"/>
+        <item index="2" name="Voice Pad Mid Book"/>
+        <item index="3" name="Nylon Guitar Mid Book"/>
+        <item index="4" name="Nylon Guitar High Book"/>
+        <item index="5" name="Conga Closed Book"/>
+        <item index="6" name="Conga Open Book"/>
+        <item index="7" name="Conga Slap Book"/>
+        <item index="8" name="Shaker Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Steel Drum Mid Loop"/>
+        <item index="1" name="Steel Drum High Loop"/>
+        <item index="2" name="Voice Pad Mid Loop"/>
+        <item index="3" name="Nylon Guitar Mid Loop"/>
+        <item index="4" name="Nylon Guitar High Loop"/>
+        <item index="5" name="Conga Closed Loop"/>
+        <item index="6" name="Conga Open Loop"/>
+        <item index="7" name="Conga Slap Loop"/>
+        <item index="8" name="Shaker Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="22" name="Shop Theme">
+      <instruments>
+        <item index="0" name="Nylon Guitar" map="program" program="24" transpose="0"/>
+        <item index="1" name="Accordion" map="program" program="21" transpose="12"/>
+        <item index="2" name="Pizz. Double Bass" map="program" program="32"
+              transpose="-12"/>
+        <item index="3" name="Trombone" map="program" program="57"/>
+        <item index="4" name="Trumpet" map="program" program="56"/>
+        <item index="5" name="Cowbell" map="program" program="117"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Conga Closed [1]"/>
+        <item index="1" name="Conga Closed [2]"/>
+        <item index="2" name="Conga Closed [3]"/>
+        <item index="3" name="Conga Closed [4]"/>
+        <item index="4" name="Conga Closed [5]"/>
+        <item index="5" name="Conga Closed [6]"/>
+        <item index="6" name="Conga Closed [7]"/>
+        <item index="7" name="Conga Closed [8]"/>
+        <item index="8" name="Conga Closed [9]"/>
+        <item index="9" name="Conga Closed [10]"/>
+        <item index="10" name="Conga Closed [11]"/>
+        <item index="11" name="Conga Closed [12]"/>
+        <item index="12" name="Conga Closed [13]"/>
+        <item index="13" name="Conga Closed [14]"/>
+        <item index="14" name="Conga Closed [15]"/>
+        <item index="15" name="Conga Closed [16]"/>
+        <item index="16" name="Conga Closed [17]"/>
+        <item index="17" name="Conga Closed [18]"/>
+        <item index="18" name="Conga Closed [19]"/>
+        <item index="19" name="Conga Closed [20]"/>
+        <item index="20" name="Conga Closed [21]"/>
+        <item index="21" name="Conga Open [1]"/>
+        <item index="22" name="Conga Open [2]"/>
+        <item index="23" name="Conga Open [3]"/>
+        <item index="24" name="Conga Open [4]"/>
+        <item index="25" name="Conga Open [5]"/>
+        <item index="26" name="Conga Open [6]"/>
+        <item index="27" name="Conga Open [7]"/>
+        <item index="28" name="Conga Open [8]"/>
+        <item index="29" name="Conga Open [9]"/>
+        <item index="30" name="Conga Open [10]"/>
+        <item index="31" name="Conga Open [11]"/>
+        <item index="32" name="Conga Open [12]"/>
+        <item index="33" name="Conga Open [13]"/>
+        <item index="34" name="Conga Open [14]"/>
+        <item index="35" name="Conga Open [15]"/>
+        <item index="36" name="Conga Open [16]"/>
+        <item index="37" name="Conga Open [17]"/>
+        <item index="38" name="Conga Open [18]"/>
+        <item index="39" name="Conga Open [19]"/>
+        <item index="40" name="Conga Slap [20]"/>
+        <item index="41" name="Conga Slap [21]"/>
+        <item index="42" name="Conga Slap [22]"/>
+        <item index="43" name="Conga Slap [23]"/>
+        <item index="44" name="Conga Slap [24]"/>
+        <item index="45" name="Conga Slap [25]"/>
+        <item index="46" name="Conga Slap [26]"/>
+        <item index="47" name="Conga Slap [27]"/>
+        <item index="48" name="Conga Slap [28]"/>
+        <item index="49" name="Conga Slap [29]"/>
+        <item index="50" name="Conga Slap [30]"/>
+        <item index="51" name="Conga Slap [31]"/>
+        <item index="52" name="Conga Slap [32]"/>
+        <item index="53" name="Conga Slap [33]"/>
+        <item index="54" name="Conga Slap [34]"/>
+        <item index="55" name="Conga Slap [35]"/>
+        <item index="56" name="Conga Slap [36]"/>
+        <item index="57" name="Conga Slap [37]"/>
+        <item index="58" name="Conga Slap [38]"/>
+        <item index="59" name="Conga Slap [39]"/>
+        <item index="60" name="Shaker [1]"/>
+        <item index="61" name="Shaker [2]"/>
+        <item index="62" name="Shaker [3]"/>
+        <item index="63" name="Shaker [4]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Nylon Guitar Env."/>
+        <item index="1" name="Accordion Env."/>
+        <item index="2" name="Pizz. Double Bass Env."/>
+        <item index="3" name="General Use Env."/>
+        <item index="4" name="Cowbell Env."/>
+        <item index="5" name="Conga &amp; Shaker Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Nylon Guitar Mid"/>
+        <item index="1" name="Nylon Guitar High"/>
+        <item index="2" name="Accordion Mid"/>
+        <item index="3" name="Pizz. Double Bass Mid"/>
+        <item index="4" name="Tombone Mid"/>
+        <item index="5" name="Trumpet Mid"/>
+        <item index="6" name="Cowbell Mid"/>
+        <item index="7" name="Conga Closed"/>
+        <item index="8" name="Conga Open"/>
+        <item index="9" name="Conga Slap"/>
+        <item index="10" name="Shaker Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Nylon Guitar Mid Book"/>
+        <item index="1" name="Nylon Guitar High Book"/>
+        <item index="2" name="Accordion Mid Book"/>
+        <item index="3" name="Pizz. Double Bass Mid Book"/>
+        <item index="4" name="Trombone Mid Book"/>
+        <item index="5" name="Trumpet Mid Book"/>
+        <item index="6" name="Cowbell Mid Book"/>
+        <item index="7" name="Conga Closed Book"/>
+        <item index="8" name="Conga Open Book"/>
+        <item index="9" name="Conga Slap Book"/>
+        <item index="10" name="Shaker Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Nylon Guitar Mid Loop"/>
+        <item index="1" name="Nylon Guitar High Loop"/>
+        <item index="2" name="Accordion Mid Loop"/>
+        <item index="3" name="Pizz. Double Bass Mid Loop"/>
+        <item index="4" name="Trombone Mid Loop"/>
+        <item index="5" name="Trumpet Mid Loop"/>
+        <item index="6" name="Cowbell Mid Loop"/>
+        <item index="7" name="Conga Closed Loop"/>
+        <item index="8" name="Conga open Loop"/>
+        <item index="9" name="Conga Slap Loop"/>
+        <item index="10" name="Shaker Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="23" name="Ice Cavern">
+      <instruments>
+        <item index="0" name="Fantasia ALT (Decay Time: 433)" map="program"
+              program="98" transpose="0"/>
+        <item index="1" name="Fantasia" map="program" program="98"/>
+        <item index="2" name="Wind" map="program" program="121" transpose="0"/>
+        <item index="3" name="Fantasia" map="program" program="98"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Fantasia ALT Env."/>
+        <item index="1" name="Fantasia Env."/>
+        <item index="2" name="Wind Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Fantasia Mid"/>
+        <item index="1" name="Wind Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Fantasia Mid Book"/>
+        <item index="1" name="Wind Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Fantasia Mid Loop"/>
+        <item index="1" name="Wind Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="24" name="Shadow Temple">
+      <instruments>
+        <item index="0" name="Djembe" map="program" program="116" transpose="0"/>
+        <item index="1" name="Wind Roar" map="program" program="122"/>
+        <item index="2" name="Lore Drone &amp; Shine" map="program" program="121"/>
+        <item index="3" name="Male Choir" map="program" program="52"/>
+        <item index="4" name="Female Choir" map="program" program="52"/>
+        <item index="5" name="Chant 3" map="program" program="85"/>
+        <item index="6" name="Spaceosphere" map="program" program="120"/>
+        <item index="7" name="Harpsichord" map="program" program="6"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Djembe Env."/>
+        <item index="1" name="Wind Roar Env."/>
+        <item index="2" name="Lore Drone &amp; Shine Env."/>
+        <item index="3" name="Male Choir Env."/>
+        <item index="4" name="Female Choir Env."/>
+        <item index="5" name="Chant 3 Env."/>
+        <item index="6" name="Spaceosphere Env."/>
+        <item index="7" name="Harpsichord Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Djembe Low"/>
+        <item index="1" name="Djembe Mid"/>
+        <item index="2" name="Djembe High"/>
+        <item index="3" name="Wind Roar Mid"/>
+        <item index="4" name="Lore Drone Low"/>
+        <item index="5" name="Shine Mid"/>
+        <item index="6" name="Male Choir Low"/>
+        <item index="7" name="Male Choir Mid"/>
+        <item index="8" name="Female Choir Mid"/>
+        <item index="9" name="Female Choir High"/>
+        <item index="10" name="Chant 3 Mid"/>
+        <item index="11" name="Spaceosphere Mid"/>
+        <item index="12" name="Harpsichord Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Djembe Low Book"/>
+        <item index="1" name="Djembe Mid Book"/>
+        <item index="2" name="Djembe High Book"/>
+        <item index="3" name="Wind Roar Mid Book"/>
+        <item index="4" name="Lore Drone Low Book"/>
+        <item index="5" name="Shine Mid Book"/>
+        <item index="6" name="Male Choir Low Book"/>
+        <item index="7" name="Male Choir Mid Book"/>
+        <item index="8" name="Female Choir Mid Book"/>
+        <item index="9" name="Female Choir High Book"/>
+        <item index="10" name="Chant 3 Mid Book"/>
+        <item index="11" name="Spaceosphere Mid Book"/>
+        <item index="12" name="Harpsichord Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Djembe Low Loop"/>
+        <item index="1" name="Djembe Mid Loop"/>
+        <item index="2" name="Djembe High Loop"/>
+        <item index="3" name="Wind Roar Mid Loop"/>
+        <item index="4" name="Lore Drone Low Loop"/>
+        <item index="5" name="Shine Mid Loop"/>
+        <item index="6" name="Male Choir Low Loop"/>
+        <item index="7" name="Male Choir Mid Loop"/>
+        <item index="8" name="Female Choir Mid Loop"/>
+        <item index="9" name="Femaloe Choir High Loop"/>
+        <item index="10" name="Chant 3 Mid Loop"/>
+        <item index="11" name="Soaceosphere Mid Loop"/>
+        <item index="12" name="Harpsichord Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="25" name="Water Temple">
+      <instruments>
+        <item index="0" name="Piccolo" map="program" program="72" transpose="0"/>
+        <item index="1" name="Gong &amp; Chimes" map="program" program="112"/>
+        <item index="2" name="Fantasia ALT" map="program" program="93"/>
+        <item index="3" name="Bamboo Chimes" map="program" program="99"/>
+        <item index="4" name="Voice Pad" map="program" program="91"/>
+        <item index="5" name="Dulcimer" map="program" program="107"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Piccolo Env."/>
+        <item index="1" name="Gong &amp; Chimes Env."/>
+        <item index="2" name="Fantasia ALT Env."/>
+        <item index="3" name="Bamboo Chimes Env."/>
+        <item index="4" name="Voice Pad Env."/>
+        <item index="5" name="Dulcimer Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Piccolo Mid"/>
+        <item index="1" name="Gong Low"/>
+        <item index="2" name="Chimes Mid"/>
+        <item index="3" name="Fantasia Mid"/>
+        <item index="4" name="Bamboo Chimes Mid"/>
+        <item index="5" name="Voice Pad Mid"/>
+        <item index="6" name="Dulcimer Low"/>
+        <item index="7" name="Dulcimer Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Piccolo Mid Book"/>
+        <item index="1" name="Gong Low Book"/>
+        <item index="2" name="Chimes Mid Book"/>
+        <item index="3" name="Fantasia Mid Book"/>
+        <item index="4" name="Bamboo Chimes Mid Book"/>
+        <item index="5" name="Voice Pad Mid Book"/>
+        <item index="6" name="Dulcimer Low Book"/>
+        <item index="7" name="Dulcimer Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Piccolo Mid Loop"/>
+        <item index="1" name="Gong Low Loop"/>
+        <item index="2" name="Chimes Mid Loop"/>
+        <item index="3" name="Fantasia Mid Loop"/>
+        <item index="4" name="Bamboo Chimes Mid Loop"/>
+        <item index="5" name="Voice Pad Mid Loop"/>
+        <item index="6" name="Dulcimer Low Loop"/>
+        <item index="7" name="Dulcimer Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="26" name="Piano (Unused)">
+      <instruments>
+        <item index="0" name="Piano" map="program" program="1" transpose="0"/>
+        <item index="1" name="Piano" map="program" program="1"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Piano Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Piano Low"/>
+        <item index="1" name="Piano Mid"/>
+        <item index="2" name="Piano High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Piano Low Book"/>
+        <item index="1" name="Piano Mid Book"/>
+        <item index="2" name="Piano High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Piano Low Loop"/>
+        <item index="1" name="Piano Mid Loop"/>
+        <item index="2" name="Piano High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="27" name="Gerudo Valley">
+      <instruments>
+        <item index="0" name="Trumpet" map="program" program="57" transpose="0"/>
+        <item index="1" name="Trombone" map="program" program="57"/>
+        <item index="2" name="Nylon Guitar (Release: 233)" map="program" program="24"/>
+        <item index="3" name="Nylon Guitar (Release: 219)" map="program" program="24"/>
+        <item index="4" name="Pizz. Double Bass" map="program" program="32"
+              transpose="-12"/>
+        <item index="5" name="Nylon Guitar (Release: 234)" map="program" program="24"
+              transpose="0"/>
+        <item index="6" name="Clap" map="program" program="115"/>
+        <item index="7" name="Clap" map="program" program="115"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Nylon Guitar Env. (Release: 233)"/>
+        <item index="2" name="Nylon Guitar Env. (Release: 219)"/>
+        <item index="3" name="Pizz. Double Bass Env."/>
+        <item index="4" name="Nylon Guitar Env. (Release: 234)"/>
+        <item index="5" name="Clap Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Tumpet Mid"/>
+        <item index="1" name="Trombone Mid"/>
+        <item index="2" name="Nylon Guitar Mid"/>
+        <item index="3" name="Nylon Guitar High"/>
+        <item index="4" name="Pizz. Double Bass Mid"/>
+        <item index="5" name="Clap Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Trumpet Mid Book"/>
+        <item index="1" name="Trombone Mid Book"/>
+        <item index="2" name="Nylon Guitar Mid Book"/>
+        <item index="3" name="Nylon Guitar High Book"/>
+        <item index="4" name="Pizz. Double Bass Mid Book"/>
+        <item index="5" name="Clap Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Trumpet Mid Loop"/>
+        <item index="1" name="Trombone Mid Loop"/>
+        <item index="2" name="Nylon Guitar Mid Loop"/>
+        <item index="3" name="Nylon Guitar High Loop"/>
+        <item index="4" name="Pizz. Double Bass Mid Loop"/>
+        <item index="5" name="Clap Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="28" name="Potion Shop">
+      <instruments>
+        <item index="0" name="Dulcimer" map="program" program="107" transpose="0"/>
+        <item index="1" name="Djembe" map="program" program="117"/>
+        <item index="2" name="Bent Drum" map="program" program="116"/>
+        <item index="3" name="Gong &amp; Chimes" map="program" program="112"
+              transpose="0"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Dulcimer Env."/>
+        <item index="1" name="Djembe Env."/>
+        <item index="2" name="Bent Drum Env."/>
+        <item index="3" name="Gong &amp; Chimes Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Dulcimer Low"/>
+        <item index="1" name="Dulcimer Mid"/>
+        <item index="2" name="Djembe Low"/>
+        <item index="3" name="Djembe Mid"/>
+        <item index="4" name="Djembe High"/>
+        <item index="5" name="Bent Drum Mid"/>
+        <item index="6" name="Gong Low"/>
+        <item index="7" name="Chimes Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Dulcimer Low Book"/>
+        <item index="1" name="Dulcimer Mid Book"/>
+        <item index="2" name="Djembe Low Book"/>
+        <item index="3" name="Djembe Mid Book"/>
+        <item index="4" name="Djembe High Book"/>
+        <item index="5" name="Bent Drum Mid Book"/>
+        <item index="6" name="Gong Low Book"/>
+        <item index="7" name="Chimes Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Dulcimer Low Loop"/>
+        <item index="1" name="Dulcimer Mid Loop"/>
+        <item index="2" name="Djembe Low Loop"/>
+        <item index="3" name="Djembe Mid Loop"/>
+        <item index="4" name="Djembe High Loop"/>
+        <item index="5" name="Bent Drum Mid Loop"/>
+        <item index="6" name="Gong Low Loop"/>
+        <item index="7" name="Chimes Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="29" name="Koume &amp; Kotake's Theme">
+      <instruments>
+        <item index="0" name="Dulcimer" map="program" program="107" transpose="0"/>
+        <item index="1" name="Djembe" map="program" program="117"/>
+        <item index="2" name="Piccolo" map="program" program="72" transpose="12"/>
+        <item index="3" name="Piccolo" map="program" program="72" transpose="12"/>
+        <item index="4" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="5" name="Strings" map="program" program="48"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Gong [1]"/>
+        <item index="1" name="Gong [2]"/>
+        <item index="2" name="Gong [3]"/>
+        <item index="3" name="Gong [4]"/>
+        <item index="4" name="Gong [5]"/>
+        <item index="5" name="Gong [6]"/>
+        <item index="6" name="Gong [7]"/>
+        <item index="7" name="Gong [8]"/>
+        <item index="8" name="Gong [9]"/>
+        <item index="9" name="Gong [10]"/>
+        <item index="10" name="Gong [11]"/>
+        <item index="11" name="Gong [12]"/>
+        <item index="12" name="Gong [13]"/>
+        <item index="13" name="Gong [14]"/>
+        <item index="14" name="Gong [15]"/>
+        <item index="15" name="Gong [16]"/>
+        <item index="16" name="Gong [17]"/>
+        <item index="17" name="Gong [18]"/>
+        <item index="18" name="Gong [19]"/>
+        <item index="19" name="Gong [20]"/>
+        <item index="20" name="Gong [21]"/>
+        <item index="21" name="Gong [22]"/>
+        <item index="22" name="Gong [23]"/>
+        <item index="23" name="Gong [24]"/>
+        <item index="24" name="Gong [25]"/>
+        <item index="25" name="Gong [26]"/>
+        <item index="26" name="Gong [27]"/>
+        <item index="27" name="Gong [28]"/>
+        <item index="28" name="Gong [29]"/>
+        <item index="29" name="Gong [30]"/>
+        <item index="30" name="Gong [31]"/>
+        <item index="31" name="Gong [32]"/>
+        <item index="32" name="Gong [33]"/>
+        <item index="33" name="Gong [34]"/>
+        <item index="34" name="Chimes [1]"/>
+        <item index="35" name="Chimes [2]"/>
+        <item index="36" name="Chimes [3]"/>
+        <item index="37" name="Chimes [4]"/>
+        <item index="38" name="Chimes [5]"/>
+        <item index="39" name="Chimes [6]"/>
+        <item index="40" name="Chimes [7]"/>
+        <item index="41" name="Chimes [8]"/>
+        <item index="42" name="Chimes [9]"/>
+        <item index="43" name="Chimes [10]"/>
+        <item index="44" name="Chimes [11]"/>
+        <item index="45" name="Chimes [12]"/>
+        <item index="46" name="Chimes [13]"/>
+        <item index="47" name="Chimes [14]"/>
+        <item index="48" name="Chimes [15]"/>
+        <item index="49" name="Chimes [16]"/>
+        <item index="50" name="Chimes [17]"/>
+        <item index="51" name="Chimes [18]"/>
+        <item index="52" name="Chimes [19]"/>
+        <item index="53" name="Chimes [20]"/>
+        <item index="54" name="Chimes [21]"/>
+        <item index="55" name="Chimes [22]"/>
+        <item index="56" name="Chimes [23]"/>
+        <item index="57" name="Chimes [24]"/>
+        <item index="58" name="Chimes [25]"/>
+        <item index="59" name="Chimes [26]"/>
+        <item index="60" name="Chimes [27]"/>
+        <item index="61" name="Chimes [28]"/>
+        <item index="62" name="Chimes [29]"/>
+        <item index="63" name="Chimes [30]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Dulcimer Env."/>
+        <item index="1" name="Djembe Env."/>
+        <item index="2" name="General Use Env."/>
+        <item index="3" name="Strings Env."/>
+        <item index="4" name="Gong &amp; Chimes Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Dulcimer Low"/>
+        <item index="1" name="Dulcimer Mid"/>
+        <item index="2" name="Djembe Low"/>
+        <item index="3" name="Djembe Mid"/>
+        <item index="4" name="Djembe High"/>
+        <item index="5" name="Piccolo Mid"/>
+        <item index="6" name="Strings Low"/>
+        <item index="7" name="Strings Mid"/>
+        <item index="8" name="Strings High"/>
+        <item index="9" name="Gong Low"/>
+        <item index="10" name="Chimes Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Dulcimer Low Book"/>
+        <item index="1" name="Dulcimer Mid Book"/>
+        <item index="2" name="Djembe Low Book"/>
+        <item index="3" name="Djembe Mid Book"/>
+        <item index="4" name="Djembe High Book"/>
+        <item index="5" name="Piccolo Mid Book"/>
+        <item index="6" name="Strings Low Book"/>
+        <item index="7" name="Strings Mid Book"/>
+        <item index="8" name="Strings High Book"/>
+        <item index="9" name="Gong Low Book"/>
+        <item index="10" name="Chimes Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Dulcimer Low Loop"/>
+        <item index="1" name="Dulcimer Mid Loop"/>
+        <item index="2" name="Djembe Low Loop"/>
+        <item index="3" name="Djembe Mid Loop"/>
+        <item index="4" name="Djembe High Loop"/>
+        <item index="5" name="Piccolo Mid Loop"/>
+        <item index="6" name="Strings Low Loop"/>
+        <item index="7" name="Strings Mid Loop"/>
+        <item index="8" name="Strings High Loop"/>
+        <item index="9" name="Gong Low Loop"/>
+        <item index="10" name="Chimes Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="30" name="Ganondorf's Organ">
+      <instruments>
+        <item index="0" name="Pipe Organ" map="program" program="19" transpose="0"/>
+        <item index="1" name="Pipe Organ" map="program" program="19"/>
+        <item index="2" name="Pipe Organ" map="program" program="19"/>
+        <item index="3" name="Horn" map="program" program="60"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Pipe Organ Env."/>
+        <item index="1" name="Horn Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Pipe Organ Mid"/>
+        <item index="1" name="Pipe Organ High"/>
+        <item index="2" name="Horn Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Pipe Organ Mid Book"/>
+        <item index="1" name="Pipe Organ High Book"/>
+        <item index="2" name="Horn Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Pipe Organ Mid Loop"/>
+        <item index="1" name="Pipe Organ High Loop"/>
+        <item index="2" name="Horn Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="31" name="Inside Ganon's Castle">
+      <instruments>
+        <item index="0" name="Wind Roar" map="program" program="122" transpose="0"/>
+        <item index="1" name="Lore Drone &amp; Shine" map="program" program="125"/>
+        <item index="2" name="Male Choir" map="program" program="52"/>
+        <item index="3" name="Piano ALT 2 (Splits: 24 &amp; 44, Release Rate: 186)"
+              map="program" program="1"/>
+        <item index="4" name="Piano ALT 3 (Splits: 22 &amp; 44, Release Rate: 93)"
+              map="program" program="1"/>
+        <item index="5" name="Spaceosphere" map="program" program="127"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Wind Roar Env."/>
+        <item index="1" name="Lore Drone &amp; Shine Env."/>
+        <item index="2" name="Male Choir Env."/>
+        <item index="3" name="Piano ALT 2 Env. (Hold Time: 229)"/>
+        <item index="4" name="Piano ALT 3 Env. (Hold Time: 298)"/>
+        <item index="5" name="Spaceosphere Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Wind Roar Mid"/>
+        <item index="1" name="Lore Drone Low"/>
+        <item index="2" name="Shine Mid"/>
+        <item index="3" name="Male Choir Low"/>
+        <item index="4" name="Male Choir Mid"/>
+        <item index="5" name="Piano Low"/>
+        <item index="6" name="Piano Mid"/>
+        <item index="7" name="Piano High"/>
+        <item index="8" name="Spaceosphere Mid"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Wind Roar Mid Book"/>
+        <item index="1" name="Lore Drone Low Book"/>
+        <item index="2" name="Shine Mid Book"/>
+        <item index="3" name="Male Choir Low Book"/>
+        <item index="4" name="Male Choir Mid Book"/>
+        <item index="5" name="Piano Low Book"/>
+        <item index="6" name="Piano Mid Book"/>
+        <item index="7" name="Piano High Book"/>
+        <item index="8" name="Spaceosphere Mid Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Wind Roar Mid Loop"/>
+        <item index="1" name="Lore Drone Low Loop"/>
+        <item index="2" name="Shine Mid Loop"/>
+        <item index="3" name="Male Choir Low Loop"/>
+        <item index="4" name="Male Choir Mid Loop"/>
+        <item index="5" name="Piano Low Loop"/>
+        <item index="6" name="Piano Mid Loop"/>
+        <item index="7" name="Piano high Loop"/>
+        <item index="8" name="Spaceospehere Mid Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="32" name="Battle 2">
+      <instruments>
+        <item index="0" name="Piccolo" map="program" program="72" transpose="12"/>
+        <item index="1" name="Female Choir" map="program" program="52" transpose="0"/>
+        <item index="2" name="Male Choir" map="program" program="52"/>
+        <item index="3" name="Horn" map="program" program="60"/>
+        <item index="4" name="Trumpet" map="program" program="56"/>
+        <item index="5" name="Trombone" map="program" program="57"/>
+        <item index="6" name="Tuba" map="program" program="58"/>
+        <item index="7" name="Strings" map="program" program="48"/>
+        <item index="8" name="Strings" map="program" program="48"/>
+        <item index="9" name="Piano" map="program" program="1"/>
+        <item index="10" name="Marimba" map="program" program="12"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Timpani Low [1]"/>
+        <item index="1" name="Timpani Low [2]"/>
+        <item index="2" name="Timpani Low [3]"/>
+        <item index="3" name="Timpani Low [4]"/>
+        <item index="4" name="Timpani Low [5]"/>
+        <item index="5" name="Timpani Low [6]"/>
+        <item index="6" name="Timpani Low [7]"/>
+        <item index="7" name="Timpani Low [8]"/>
+        <item index="8" name="Timpani Low [9]"/>
+        <item index="9" name="Timpani Low [10]"/>
+        <item index="10" name="Timpani Low [11]"/>
+        <item index="11" name="Timpani Low [12]"/>
+        <item index="12" name="Timpani Low [13]"/>
+        <item index="13" name="Timpani Low [14]"/>
+        <item index="14" name="Timpani Low [15]"/>
+        <item index="15" name="Timpani Low [16]"/>
+        <item index="16" name="Orchestra Snare Low [1]"/>
+        <item index="17" name="Orchestra Snare Low [2]"/>
+        <item index="18" name="Orchestra Snare High [1]"/>
+        <item index="19" name="Orchestra Snare High [2]"/>
+        <item index="20" name="Orchestra Snare High [3]"/>
+        <item index="21" name="Orchestra Crash [1]"/>
+        <item index="22" name="Orchestra Crash [2]"/>
+        <item index="23" name="Orchestra Crash [3]"/>
+        <item index="24" name="Orchestra Crash [4]"/>
+        <item index="25" name="Orchestra Crash [5]"/>
+        <item index="26" name="Orchestra Crash [6]"/>
+        <item index="27" name="Orchestra Crash [7]"/>
+        <item index="28" name="Orchestra Crash [8]"/>
+        <item index="29" name="Orchestra Crash [9]"/>
+        <item index="30" name="Orchestra Crash [10]"/>
+        <item index="31" name="Orchestra Crash [11]"/>
+        <item index="32" name="Orchestra Crash [12]"/>
+        <item index="33" name="Timpani High [1]"/>
+        <item index="34" name="Timpani High [2]"/>
+        <item index="35" name="Timpani High [3]"/>
+        <item index="36" name="Timpani High [4]"/>
+        <item index="37" name="Timpani High [5]"/>
+        <item index="38" name="Timpani High [6]"/>
+        <item index="39" name="Timpani High [7]"/>
+        <item index="40" name="Timpani High [8]"/>
+        <item index="41" name="Timpani High [9]"/>
+        <item index="42" name="Timpani High [10]"/>
+        <item index="43" name="Timpani High [11]"/>
+        <item index="44" name="Timpani High [12]"/>
+        <item index="45" name="Timpani High [13]"/>
+        <item index="46" name="Timpani High [14]"/>
+        <item index="47" name="Timpani High [15]"/>
+        <item index="48" name="Timpani High [16]"/>
+        <item index="49" name="Timpani High [17]"/>
+        <item index="50" name="Timpani High [18]"/>
+        <item index="51" name="Timpani High [19]"/>
+        <item index="52" name="Timpani High [20]"/>
+        <item index="53" name="Timpani High [21]"/>
+        <item index="54" name="Timpani High [22]"/>
+        <item index="55" name="Timpani High [23]"/>
+        <item index="56" name="Timpani High [24]"/>
+        <item index="57" name="Timpani High [25]"/>
+        <item index="58" name="Timpani High [26]"/>
+        <item index="59" name="Timpani High [27]"/>
+        <item index="60" name="Timpani High [28]"/>
+        <item index="61" name="Timpani High [29]"/>
+        <item index="62" name="Timpani High [30]"/>
+        <item index="63" name="Timpani High [31]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Female Choir Env."/>
+        <item index="2" name="Male Choir Env."/>
+        <item index="3" name="Strings Env."/>
+        <item index="4" name="Piano Env."/>
+        <item index="5" name="Marimba Env."/>
+        <item index="6" name="Orchestra Kit Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Piccolo Mid"/>
+        <item index="1" name="Female Choir Mid"/>
+        <item index="2" name="Female Choir High"/>
+        <item index="3" name="Male Choir Low"/>
+        <item index="4" name="Male Choir Mid"/>
+        <item index="5" name="Horn Mid"/>
+        <item index="6" name="Tumpet Mid"/>
+        <item index="7" name="Trombone Mid"/>
+        <item index="8" name="Tuba Mid"/>
+        <item index="9" name="Strings Low"/>
+        <item index="10" name="Strings Mid"/>
+        <item index="11" name="Strings High"/>
+        <item index="12" name="Piano Low"/>
+        <item index="13" name="Piano Mid"/>
+        <item index="14" name="Piano High"/>
+        <item index="15" name="Marimba Mid"/>
+        <item index="16" name="Marimba High"/>
+        <item index="17" name="Timpani Low"/>
+        <item index="18" name="Orchestra Snare Low"/>
+        <item index="19" name="Orchestra Snare High"/>
+        <item index="20" name="Orchestra Crash"/>
+        <item index="21" name="Timpani High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Piccolo Mid Book"/>
+        <item index="1" name="Female Choir Mid Book"/>
+        <item index="2" name="Female Choir High Book"/>
+        <item index="3" name="Male Choir Low Book"/>
+        <item index="4" name="Male Choir Mid Book"/>
+        <item index="5" name="Horn Mid Book"/>
+        <item index="6" name="Trumpet Mid Book"/>
+        <item index="7" name="Trombone Mid Book"/>
+        <item index="8" name="Tuba Mid Book"/>
+        <item index="9" name="Strings Low Book"/>
+        <item index="10" name="Strings Mid Book"/>
+        <item index="11" name="Strings High Book"/>
+        <item index="12" name="Piano Low Book"/>
+        <item index="13" name="Piano Mid Book"/>
+        <item index="14" name="Piano High Book"/>
+        <item index="15" name="Marimba Mid Book"/>
+        <item index="16" name="Marimba High Book"/>
+        <item index="17" name="Timpani Low Book"/>
+        <item index="18" name="Orchestra Snare Low Book"/>
+        <item index="19" name="Orchestra Snare High Book"/>
+        <item index="20" name="Orchestra Crash Book"/>
+        <item index="21" name="Timpani High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Piccolo Mid Loop"/>
+        <item index="1" name="Female Choir Mid Loop"/>
+        <item index="2" name="Female Choir High Loop"/>
+        <item index="3" name="Male Choir Low Loop"/>
+        <item index="4" name="Male Choir Mid Loop"/>
+        <item index="5" name="Horn Mid Loop"/>
+        <item index="6" name="Trumpet Mid Loop"/>
+        <item index="7" name="Trombone Mid Loop"/>
+        <item index="8" name="Tuba Mid Loop"/>
+        <item index="9" name="Strings Low Loop"/>
+        <item index="10" name="Srings Mid Loop"/>
+        <item index="11" name="Strings High Loop"/>
+        <item index="12" name="Piano Low Loop"/>
+        <item index="13" name="Piano Mid Loop"/>
+        <item index="14" name="Piano High Loop"/>
+        <item index="15" name="Marimba Mid Loop"/>
+        <item index="16" name="Marimba High Loop"/>
+        <item index="17" name="Timpani Low Loop"/>
+        <item index="18" name="Orchestra Snare Low Loop"/>
+        <item index="19" name="Orchestra Snare High Loop"/>
+        <item index="20" name="Orchestra Crash Loop"/>
+        <item index="21" name="Timpani High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="33" name="Ending Orchestra 1">
+      <instruments>
+        <item index="0" name="Malon Voice (Release: 248)" map="program" program="85"
+              transpose="0"/>
+        <item index="1" name="Malon Voice (Release: 247)" map="program" program="54"/>
+        <item index="2" name="Clarinet" map="program" program="71"/>
+        <item index="3" name="Horn" map="program" program="60"/>
+        <item index="4" name="Oboe" map="program" program="68"/>
+        <item index="5" name="Harp" map="program" program="46"/>
+        <item index="6" name="Fiddle" map="program" program="40"/>
+        <item index="7" name="Glockenspiel" map="program" program="9" transpose="12"/>
+        <item index="8" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="9" name="Strings" map="program" program="48"/>
+        <item index="10" name="Carillon Bell" map="program" program="14" transpose="0"/>
+        <item index="11" name="Harp" map="program" program="46"/>
+        <item index="12" name="Female Choir" map="program" program="52" transpose="0"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Timpani Low [1]"/>
+        <item index="1" name="Timpani Low [2]"/>
+        <item index="2" name="Timpani Low [3]"/>
+        <item index="3" name="Timpani Low [4]"/>
+        <item index="4" name="Timpani Low [5]"/>
+        <item index="5" name="Timpani Low [6]"/>
+        <item index="6" name="Timpani Low [7]"/>
+        <item index="7" name="Timpani Low [8]"/>
+        <item index="8" name="Timpani Low [9]"/>
+        <item index="9" name="Timpani Low [10]"/>
+        <item index="10" name="Timpani Low [11]"/>
+        <item index="11" name="Timpani Low [12]"/>
+        <item index="12" name="Timpani Low [13]"/>
+        <item index="13" name="Timpani Low [14]"/>
+        <item index="14" name="Timpani Low [15]"/>
+        <item index="15" name="Timpani Low [16]"/>
+        <item index="16" name="Orchestra Snare Low [1]"/>
+        <item index="17" name="Orchestra Snare Low [2]"/>
+        <item index="18" name="Orchestra Snare High [1]"/>
+        <item index="19" name="Orchestra Snare High [2]"/>
+        <item index="20" name="Orchestra Snare High [3]"/>
+        <item index="21" name="Orchestra Crash [1]"/>
+        <item index="22" name="Orchestra Crash [2]"/>
+        <item index="23" name="Orchestra Crash [3]"/>
+        <item index="24" name="Orchestra Crash [4]"/>
+        <item index="25" name="Orchestra Crash [5]"/>
+        <item index="26" name="Orchestra Crash [6]"/>
+        <item index="27" name="Orchestra Crash [7]"/>
+        <item index="28" name="Orchestra Crash [8]"/>
+        <item index="29" name="Orchestra Crash [9]"/>
+        <item index="30" name="Orchestra Crash [10]"/>
+        <item index="31" name="Orchestra Crash [11]"/>
+        <item index="32" name="Orchestra Crash [12]"/>
+        <item index="33" name="Timpani High [1]"/>
+        <item index="34" name="Timpani High [2]"/>
+        <item index="35" name="Timpani High [3]"/>
+        <item index="36" name="Timpani High [4]"/>
+        <item index="37" name="Timpani High [5]"/>
+        <item index="38" name="Timpani High [6]"/>
+        <item index="39" name="Timpani High [7]"/>
+        <item index="40" name="Timpani High [8]"/>
+        <item index="41" name="Timpani High [9]"/>
+        <item index="42" name="Timpani High [10]"/>
+        <item index="43" name="Timpani High [11]"/>
+        <item index="44" name="Timpani High [12]"/>
+        <item index="45" name="Timpani High [13]"/>
+        <item index="46" name="Timpani High [14]"/>
+        <item index="47" name="Timpani High [15]"/>
+        <item index="48" name="Timpani High [16]"/>
+        <item index="49" name="Timpani High [17]"/>
+        <item index="50" name="Timpani High [18]"/>
+        <item index="51" name="Timpani High [19]"/>
+        <item index="52" name="Timpani High [20]"/>
+        <item index="53" name="Timpani High [21]"/>
+        <item index="54" name="Timpani High [22]"/>
+        <item index="55" name="Timpani High [23]"/>
+        <item index="56" name="Timpani High [24]"/>
+        <item index="57" name="Timpani High [25]"/>
+        <item index="58" name="Timpani High [26]"/>
+        <item index="59" name="Timpani High [27]"/>
+        <item index="60" name="Timpani High [28]"/>
+        <item index="61" name="Timpani High [29]"/>
+        <item index="62" name="Timpani High [30]"/>
+        <item index="63" name="Timpani High [31]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Malon Voice Env. (Release: 248)"/>
+        <item index="1" name="Malon Voice Env. (Release: 247)"/>
+        <item index="2" name="General Use Env."/>
+        <item index="3" name="Harp Env."/>
+        <item index="4" name="Fiddle Env."/>
+        <item index="5" name="Glockenspiel Env."/>
+        <item index="6" name="Strings Env."/>
+        <item index="7" name="Carillon Bell Env."/>
+        <item index="8" name="Female Choir Env."/>
+        <item index="9" name="Orchestra Kit Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Malon Voice Mid"/>
+        <item index="1" name="Clarinet Mid"/>
+        <item index="2" name="Horn Mid"/>
+        <item index="3" name="Oboe Mid"/>
+        <item index="4" name="Harp Mid"/>
+        <item index="5" name="Harp High"/>
+        <item index="6" name="Fiddle Mid"/>
+        <item index="7" name="Glockenspiel Mid"/>
+        <item index="8" name="Strings Low"/>
+        <item index="9" name="Strings Mid"/>
+        <item index="10" name="Strings High"/>
+        <item index="11" name="Carillon Bell Mid"/>
+        <item index="12" name="Female Choir Mid"/>
+        <item index="13" name="Female Choir High"/>
+        <item index="14" name="Timpani Low"/>
+        <item index="15" name="Orchestra Snare Low"/>
+        <item index="16" name="Orchestra Snare High"/>
+        <item index="17" name="Orchestra Crash"/>
+        <item index="18" name="Timpani High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Malon Voice Mid Book"/>
+        <item index="1" name="Clarinet Mid Book"/>
+        <item index="2" name="Horn Mid Book"/>
+        <item index="3" name="Oboe Mid Book"/>
+        <item index="4" name="Harp Mid Book"/>
+        <item index="5" name="Harp High Book"/>
+        <item index="6" name="Fiddle Mid Book"/>
+        <item index="7" name="Glockenspiel Mid Book"/>
+        <item index="8" name="Strings Low Book"/>
+        <item index="9" name="Strings Mid Book"/>
+        <item index="10" name="Strings High Book"/>
+        <item index="11" name="Carillon Bell Mid Book"/>
+        <item index="12" name="Female Choir Mid Book"/>
+        <item index="13" name="Female Choir High Book"/>
+        <item index="14" name="Timpani Low Book"/>
+        <item index="15" name="Orchestra Snare Low Book"/>
+        <item index="16" name="Orchestra Snare High Book"/>
+        <item index="17" name="Orchestra Crash Book"/>
+        <item index="18" name="Timpani High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Malon Voice Mid Loop"/>
+        <item index="1" name="Clarinet Mid Loop"/>
+        <item index="2" name="Horn Mid Loop"/>
+        <item index="3" name="Oboe Mid Loop"/>
+        <item index="4" name="Harp Mid Loop"/>
+        <item index="5" name="Harp High Loop"/>
+        <item index="6" name="Fiddle Mid Loop"/>
+        <item index="7" name="Glockenspiel Mid Loop"/>
+        <item index="8" name="Strings Low Loop"/>
+        <item index="9" name="Strings Mid Loop"/>
+        <item index="10" name="Strings High Loop"/>
+        <item index="11" name="Carillon Bell Loop"/>
+        <item index="12" name="Female Choir Mid Loop"/>
+        <item index="13" name="Female Choir Mid Loop"/>
+        <item index="14" name="Timpani Low Loop"/>
+        <item index="15" name="Orchestra Snare Low Loop"/>
+        <item index="16" name="Orchestra Snare High Loop"/>
+        <item index="17" name="Orchestra Crash Loop"/>
+        <item index="18" name="Timpani High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="34" name="Ending Orchestra 2">
+      <instruments>
+        <item index="0" name="Dulcimer" map="program" program="107" transpose="0"/>
+        <item index="1" name="Ocarina" map="program" program="79" transpose="12"/>
+        <item index="2" name="Bassoon" map="program" program="70"/>
+        <item index="3" name="Oboe" map="program" program="68" transpose="0"/>
+        <item index="4" name="Female Choir" map="program" program="52"/>
+        <item index="5" name="Tambourine" map="program" program="115"/>
+        <item index="6" name="Harp" map="program" program="46" transpose="0"/>
+        <item index="7" name="Glockenspiel" map="program" program="9" transpose="12"/>
+        <item index="8" name="Malon Voice (Release: 248)" map="program" program="85"/>
+        <item index="9" name="Strings" map="program" program="48"/>
+        <item index="10" name="Strings" map="program" program="48"/>
+        <item index="11" name="Pizz. Strings" map="program" program="45"/>
+        <item index="12" name="Horn" map="program" program="60"/>
+        <item index="13" name="Male Choir" map="program" program="52"/>
+        <item index="14" name="Cuica" map="program" program="118" transpose="0"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Timpani Low [1]"/>
+        <item index="1" name="Timpani Low [2]"/>
+        <item index="2" name="Timpani Low [3]"/>
+        <item index="3" name="Timpani Low [4]"/>
+        <item index="4" name="Timpani Low [5]"/>
+        <item index="5" name="Timpani Low [6]"/>
+        <item index="6" name="Timpani Low [7]"/>
+        <item index="7" name="Timpani Low [8]"/>
+        <item index="8" name="Timpani Low [9]"/>
+        <item index="9" name="Timpani Low [10]"/>
+        <item index="10" name="Timpani Low [11]"/>
+        <item index="11" name="Timpani Low [12]"/>
+        <item index="12" name="Timpani Low [13]"/>
+        <item index="13" name="Timpani Low [14]"/>
+        <item index="14" name="Timpani Low [15]"/>
+        <item index="15" name="Timpani Low [16]"/>
+        <item index="16" name="Orchestra Snare Low [1]"/>
+        <item index="17" name="Orchestra Snare Low [2]"/>
+        <item index="18" name="Orchestra Snare High [1]"/>
+        <item index="19" name="Orchestra Snare High [2]"/>
+        <item index="20" name="Orchestra Snare High [3]"/>
+        <item index="21" name="Orchestra Crash [1]"/>
+        <item index="22" name="Orchestra Crash [2]"/>
+        <item index="23" name="Orchestra Crash [3]"/>
+        <item index="24" name="Orchestra Crash [4]"/>
+        <item index="25" name="Orchestra Crash [5]"/>
+        <item index="26" name="Orchestra Crash [6]"/>
+        <item index="27" name="Orchestra Crash [7]"/>
+        <item index="28" name="Orchestra Crash [8]"/>
+        <item index="29" name="Orchestra Crash [9]"/>
+        <item index="30" name="Orchestra Crash [10]"/>
+        <item index="31" name="Orchestra Crash [11]"/>
+        <item index="32" name="Orchestra Crash [12]"/>
+        <item index="33" name="Timpani High [1]"/>
+        <item index="34" name="Timpani High [2]"/>
+        <item index="35" name="Timpani High [3]"/>
+        <item index="36" name="Timpani High [4]"/>
+        <item index="37" name="Timpani High [5]"/>
+        <item index="38" name="Timpani High [6]"/>
+        <item index="39" name="Timpani High [7]"/>
+        <item index="40" name="Timpani High [8]"/>
+        <item index="41" name="Timpani High [9]"/>
+        <item index="42" name="Timpani High [10]"/>
+        <item index="43" name="Timpani High [11]"/>
+        <item index="44" name="Timpani High [12]"/>
+        <item index="45" name="Timpani High [13]"/>
+        <item index="46" name="Timpani High [14]"/>
+        <item index="47" name="Timpani High [15]"/>
+        <item index="48" name="Timpani High [16]"/>
+        <item index="49" name="Timpani High [17]"/>
+        <item index="50" name="Timpani High [18]"/>
+        <item index="51" name="Timpani High [19]"/>
+        <item index="52" name="Timpani High [20]"/>
+        <item index="53" name="Timpani High [21]"/>
+        <item index="54" name="Timpani High [22]"/>
+        <item index="55" name="Timpani High [23]"/>
+        <item index="56" name="Timpani High [24]"/>
+        <item index="57" name="Timpani High [25]"/>
+        <item index="58" name="Timpani High [26]"/>
+        <item index="59" name="Timpani High [27]"/>
+        <item index="60" name="Timpani High [28]"/>
+        <item index="61" name="Timpani High [29]"/>
+        <item index="62" name="Timpani High [30]"/>
+        <item index="63" name="Timpani High [31]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="Dulcimer Env."/>
+        <item index="1" name="Ocarina Env."/>
+        <item index="2" name="General Use Env."/>
+        <item index="3" name="Female Choir Env."/>
+        <item index="4" name="Tambourine Env."/>
+        <item index="5" name="Harp Env."/>
+        <item index="6" name="Glockenspiel Env."/>
+        <item index="7" name="Malon Voice Env."/>
+        <item index="8" name="Strings Env."/>
+        <item index="9" name="Pizz. Strings Env."/>
+        <item index="10" name="Male Choir Env."/>
+        <item index="11" name="Cuica Env."/>
+        <item index="12" name="Orchestra Kit Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Dulcimer Low"/>
+        <item index="1" name="Dulcimer Mid"/>
+        <item index="2" name="Ocarina Mid"/>
+        <item index="3" name="Bassoon Mid"/>
+        <item index="4" name="Oboe Mid"/>
+        <item index="5" name="Female Choir Mid"/>
+        <item index="6" name="Female Choir High"/>
+        <item index="7" name="Tambourine Slap"/>
+        <item index="8" name="Tambourine Tap"/>
+        <item index="9" name="Tambourine Shake"/>
+        <item index="10" name="Harp Mid"/>
+        <item index="11" name="Harp High"/>
+        <item index="12" name="Glockenspiel Mid"/>
+        <item index="13" name="Malon Voice Mid"/>
+        <item index="14" name="Strings Low"/>
+        <item index="15" name="Strings Mid"/>
+        <item index="16" name="Strings High"/>
+        <item index="17" name="Pizz. Strings Mid"/>
+        <item index="18" name="Pizz. Strings High"/>
+        <item index="19" name="Horn Mid"/>
+        <item index="20" name="Male Choir Low"/>
+        <item index="21" name="Male Choir Mid"/>
+        <item index="22" name="Cuica Low"/>
+        <item index="23" name="Cuica Mid"/>
+        <item index="24" name="Timpani Low"/>
+        <item index="25" name="Orchestra Snare Low"/>
+        <item index="26" name="Orchestra Snare High"/>
+        <item index="27" name="Orchestra Crash"/>
+        <item index="28" name="Timpani High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Dulcimer Low Book"/>
+        <item index="1" name="Dulcimer Low Book"/>
+        <item index="2" name="Ocarina Mid Book"/>
+        <item index="3" name="Bassoon Mid Book"/>
+        <item index="4" name="Oboe Mid Book"/>
+        <item index="5" name="Female Choir Mid Book"/>
+        <item index="6" name="Female Choir High Book"/>
+        <item index="7" name="Tambourine Slap &amp; Shake Book"/>
+        <item index="8" name="Tambourine Tap Book"/>
+        <item index="9" name="Harp Mid Book"/>
+        <item index="10" name="Harp High Book"/>
+        <item index="11" name="Glockenspiel Mid Book"/>
+        <item index="12" name="Malon Voice Mid Book"/>
+        <item index="13" name="Strings Low Book"/>
+        <item index="14" name="Strings Mid Book"/>
+        <item index="15" name="Strings High Book"/>
+        <item index="16" name="Pizz. Strings Mid Book"/>
+        <item index="17" name="Pizz. Strings High Book"/>
+        <item index="18" name="Horn Mid Book"/>
+        <item index="19" name="Male Choir Low Book"/>
+        <item index="20" name="Male Choir Mid Book"/>
+        <item index="21" name="Cuica Low Book"/>
+        <item index="22" name="Cuica Mid Book"/>
+        <item index="23" name="Timpani Low Book"/>
+        <item index="24" name="Orchestra Snare Low Book"/>
+        <item index="25" name="Orchestra Snare High Book"/>
+        <item index="26" name="Orchestra Crash Book"/>
+        <item index="27" name="Timpani High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Dulcimer Low Loop"/>
+        <item index="1" name="Dulcimer Mid Loop"/>
+        <item index="2" name="Ocarina Mid Loop"/>
+        <item index="3" name="Bassoon Mid Loop"/>
+        <item index="4" name="Oboe Mid Loop"/>
+        <item index="5" name="Female Choir Mid Loop"/>
+        <item index="6" name="Female Choir High Loop"/>
+        <item index="7" name="Tambourine Slap Loop"/>
+        <item index="8" name="Tambourine Tap Loop"/>
+        <item index="9" name="Tambourine Shake Loop"/>
+        <item index="10" name="Harp Mid Loop"/>
+        <item index="11" name="Harp High Loop"/>
+        <item index="12" name="Glockenspiel Mid Loop"/>
+        <item index="13" name="Malon Voice Mid Loop"/>
+        <item index="14" name="Strings Low Loop"/>
+        <item index="15" name="Strings Mid Loop"/>
+        <item index="16" name="Strings High Loop"/>
+        <item index="17" name="Pizz. Strings Mid Loop"/>
+        <item index="18" name="Pizz. Strings High Loop"/>
+        <item index="19" name="Horn Mid Loop"/>
+        <item index="20" name="Male Choir Low Loop"/>
+        <item index="21" name="Male Choir Mid Loop"/>
+        <item index="22" name="Cuica Low Loop"/>
+        <item index="23" name="Cuica Mid Loop"/>
+        <item index="24" name="Timpani Low Loop"/>
+        <item index="25" name="Orchestra Snare Low Loop"/>
+        <item index="26" name="Orchestra Snare High Loop"/>
+        <item index="27" name="Orchestra Crash Loop"/>
+        <item index="28" name="Timpani High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="35" name="Fanfare Orchestra">
+      <instruments>
+        <item index="0" name="Trumpet" map="program" program="56" transpose="0"/>
+        <item index="1" name="Trombone" map="program" program="57"/>
+        <item index="2" name="Tuba" map="program" program="58"/>
+        <item index="3" name="Glockenspiel" map="program" program="9" transpose="12"/>
+        <item index="4" name="Strings" map="program" program="48" transpose="0"/>
+        <item index="5" name="Strings" map="program" program="48"/>
+        <item index="6" name="Harp" map="program" program="46"/>
+      </instruments>
+      <drums>
+        <item index="0" name="Timpani Low [1]"/>
+        <item index="1" name="Timpani Low [2]"/>
+        <item index="2" name="Timpani Low [3]"/>
+        <item index="3" name="Timpani Low [4]"/>
+        <item index="4" name="Timpani Low [5]"/>
+        <item index="5" name="Timpani Low [6]"/>
+        <item index="6" name="Timpani Low [7]"/>
+        <item index="7" name="Timpani Low [8]"/>
+        <item index="8" name="Timpani Low [9]"/>
+        <item index="9" name="Timpani Low [10]"/>
+        <item index="10" name="Timpani Low [11]"/>
+        <item index="11" name="Timpani Low [12]"/>
+        <item index="12" name="Timpani Low [13]"/>
+        <item index="13" name="Timpani Low [14]"/>
+        <item index="14" name="Timpani Low [15]"/>
+        <item index="15" name="Timpani Low [16]"/>
+        <item index="16" name="Orchestra Snare Low [1]"/>
+        <item index="17" name="Orchestra Snare Low [2]"/>
+        <item index="18" name="Orchestra Snare High [1]"/>
+        <item index="19" name="Orchestra Snare High [2]"/>
+        <item index="20" name="Orchestra Snare High [3]"/>
+        <item index="21" name="Orchestra Crash [1]"/>
+        <item index="22" name="Orchestra Crash [2]"/>
+        <item index="23" name="Orchestra Crash [3]"/>
+        <item index="24" name="Orchestra Crash [4]"/>
+        <item index="25" name="Orchestra Crash [5]"/>
+        <item index="26" name="Orchestra Crash [6]"/>
+        <item index="27" name="Orchestra Crash [7]"/>
+        <item index="28" name="Orchestra Crash [8]"/>
+        <item index="29" name="Orchestra Crash [9]"/>
+        <item index="30" name="Orchestra Crash [10]"/>
+        <item index="31" name="Orchestra Crash [11]"/>
+        <item index="32" name="Orchestra Crash [12]"/>
+        <item index="33" name="Timpani High [1]"/>
+        <item index="34" name="Timpani High [2]"/>
+        <item index="35" name="Timpani High [3]"/>
+        <item index="36" name="Timpani High [4]"/>
+        <item index="37" name="Timpani High [5]"/>
+        <item index="38" name="Timpani High [6]"/>
+        <item index="39" name="Timpani High [7]"/>
+        <item index="40" name="Timpani High [8]"/>
+        <item index="41" name="Timpani High [9]"/>
+        <item index="42" name="Timpani High [10]"/>
+        <item index="43" name="Timpani High [11]"/>
+        <item index="44" name="Timpani High [12]"/>
+        <item index="45" name="Timpani High [13]"/>
+        <item index="46" name="Timpani High [14]"/>
+        <item index="47" name="Timpani High [15]"/>
+        <item index="48" name="Timpani High [16]"/>
+        <item index="49" name="Timpani High [17]"/>
+        <item index="50" name="Timpani High [18]"/>
+        <item index="51" name="Timpani High [19]"/>
+        <item index="52" name="Timpani High [20]"/>
+        <item index="53" name="Timpani High [21]"/>
+        <item index="54" name="Timpani High [22]"/>
+        <item index="55" name="Timpani High [23]"/>
+        <item index="56" name="Timpani High [24]"/>
+        <item index="57" name="Timpani High [25]"/>
+        <item index="58" name="Timpani High [26]"/>
+        <item index="59" name="Timpani High [27]"/>
+        <item index="60" name="Timpani High [28]"/>
+        <item index="61" name="Timpani High [29]"/>
+        <item index="62" name="Timpani High [30]"/>
+        <item index="63" name="Timpani High [31]"/>
+      </drums>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Glockenspiel Env."/>
+        <item index="2" name="Strings Env."/>
+        <item index="3" name="Harp Env."/>
+        <item index="4" name="Orchestra Kit Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Tumper Mid"/>
+        <item index="1" name="Trombone Mid"/>
+        <item index="2" name="Tuba Mid"/>
+        <item index="3" name="Glockenspiel Mid"/>
+        <item index="4" name="Strings Low"/>
+        <item index="5" name="Strings Mid"/>
+        <item index="6" name="Strings High"/>
+        <item index="7" name="Harp Mid"/>
+        <item index="8" name="Harp High"/>
+        <item index="9" name="Timpani Low"/>
+        <item index="10" name="Orchestra Snare Low"/>
+        <item index="11" name="Orchestra Snare High"/>
+        <item index="12" name="Orchestra Crash"/>
+        <item index="13" name="Timpani High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Trumpet Mid Book"/>
+        <item index="1" name="Trombone Mid Book"/>
+        <item index="2" name="Tuba Mid Book"/>
+        <item index="3" name="Glockenspiel Mid Book"/>
+        <item index="4" name="Strings Low Book"/>
+        <item index="5" name="Strings Mid Book"/>
+        <item index="6" name="Strings High Book"/>
+        <item index="7" name="Harp Mid Book"/>
+        <item index="8" name="Harp High Book"/>
+        <item index="9" name="Timpani Low Book"/>
+        <item index="10" name="Orchestra Snare Low Book"/>
+        <item index="11" name="Orchestra Snare High Book"/>
+        <item index="12" name="Orchestra Crash Book"/>
+        <item index="13" name="Timpani High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Tumpet Mid Loop"/>
+        <item index="1" name="Trombone Mid Loop"/>
+        <item index="2" name="Tuba Mid Loop"/>
+        <item index="3" name="Glockenspiel Mid Loop"/>
+        <item index="4" name="Strings Low Loop"/>
+        <item index="5" name="Strings Mid Loop"/>
+        <item index="6" name="Strings High Loop"/>
+        <item index="7" name="Harp Mid Loop"/>
+        <item index="8" name="Harp High Loop"/>
+        <item index="9" name="Timpani Low Loop"/>
+        <item index="10" name="Orchestra Snare Low Loop"/>
+        <item index="11" name="Orchestra Snare High Loop"/>
+        <item index="12" name="Orchestra Crash Loop"/>
+        <item index="13" name="Timpani High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="36" name="Kaepora Gaebora's Theme">
+      <instruments>
+        <item index="0" name="Oboe" map="program" program="68" transpose="0"/>
+        <item index="1" name="Bassoon" map="program" program="70"/>
+        <item index="2" name="Strings" map="program" program="48"/>
+        <item index="3" name="Strings" map="program" program="48"/>
+        <item index="4" name="Pizz. Strings" map="program" program="45"/>
+        <item index="5" name="Harp" map="program" program="46"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="General Use Env."/>
+        <item index="1" name="Strings Env."/>
+        <item index="2" name="Pizz. Strings Env."/>
+        <item index="3" name="Harp Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Oboe Mid"/>
+        <item index="1" name="Bassoon Mid"/>
+        <item index="2" name="Strings Low"/>
+        <item index="3" name="Strings Mid"/>
+        <item index="4" name="Strings High"/>
+        <item index="5" name="Pizz. Strings Mid"/>
+        <item index="6" name="Pizz. Strings High"/>
+        <item index="7" name="Harp Mid"/>
+        <item index="8" name="Harp High"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Oboe Mid Book"/>
+        <item index="1" name="Bassoon Mid Book"/>
+        <item index="2" name="Strings Low Book"/>
+        <item index="3" name="Strings Mid Book"/>
+        <item index="4" name="Strings High Book"/>
+        <item index="5" name="Pizz. Strings Mid Book"/>
+        <item index="6" name="Pizz. Strings High Book"/>
+        <item index="7" name="Harp Mid Book"/>
+        <item index="8" name="Harp High Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Oboe Mid Loop"/>
+        <item index="1" name="Bassoon Mid Loop"/>
+        <item index="2" name="Strings Low Loop"/>
+        <item index="3" name="Strings Mid Loop"/>
+        <item index="4" name="Strings High Loop"/>
+        <item index="5" name="Pizz. Strings Mid Loop"/>
+        <item index="6" name="Pizz. Strings High Loop"/>
+        <item index="7" name="Harp Mid Loop"/>
+        <item index="8" name="Harp High Loop"/>
+      </aladpcmloops>
+    </indexentry>
+    <indexentry index="37" name="Probably Unused Bank (Plays Garbage Data)">
+      <instruments>
+        <item index="0" name="Junk 0"/>
+        <item index="1" name="Junk 1"/>
+      </instruments>
+      <envelopes>
+        <item index="0" name="Junk 0 Env."/>
+        <item index="1" name="Junk 1 Env."/>
+      </envelopes>
+      <samples>
+        <item index="0" name="Junk"/>
+      </samples>
+      <aladpcmbooks>
+        <item index="0" name="Junk Book"/>
+      </aladpcmbooks>
+      <aladpcmloops>
+        <item index="0" name="Junk Loop"/>
+      </aladpcmloops>
+    </indexentry>
+  </audiobankidx>
+  <audioseqidx>
+    <indexentry index="0" name="Master Sequence - Controls actor sounds"/>
+    <indexentry index="1" name="Nature Ambience"/>
+    <indexentry index="2" name="Hyrule Field (Master)"/>
+    <indexentry index="3" name="Hyrule Field (Day 1 - GG - Opening)"/>
+    <indexentry index="4" name="Hyrule Field (Day 2 - GF - Trumpets 1)"/>
+    <indexentry index="5" name="Hyrule Field (Day 3 - GF - Trumpets 2)"/>
+    <indexentry index="6" name="Hyrule Field (Day 4 - GFEb - Clarinets)"/>
+    <indexentry index="7" name="Hyrule Field (Day 5 - GCB - Strings, Pizz. Strings)"/>
+    <indexentry index="8" name="Hyrule Field (Day 6 - GFEm - OoT Theme)"/>
+    <indexentry index="9" name="Hyrule Field (Day 7 - CD - Horns)"/>
+    <indexentry index="10" name="Hyrule Field (Day 8 - CD - Strings)"/>
+    <indexentry index="11" name="Hyrule Field (Day 9 - GG - Horns)"/>
+    <indexentry index="12" name="Hyrule Field (Day 10 - GBbDb - Horns)"/>
+    <indexentry index="13" name="Hyrule Field (Day 11 - AbCF - Horns"/>
+    <indexentry index="14" name="Hyrule Field (Day 12 - GG - Neutral Opening)"/>
+    <indexentry index="15" name="Hyrule Field (Battle 1 - OoT Theme Deconstruction)"/>
+    <indexentry index="16" name="Hyrule Field (Battle 2 - Brass)"/>
+    <indexentry index="17" name="Hyrule Field (Battle 3 - Brass, Marimba)"/>
+    <indexentry index="18" name="Hyrule Field (Battle 4 - Stabs, OoT Theme)"/>
+    <indexentry index="19" name="Hyrule Field (Battle 5 - Stabs, Chords)"/>
+    <indexentry index="20" name="Hyrule Field (Sunset 1 - Oboe)"/>
+    <indexentry index="21" name="Hyrule Field (Sunset 2 - Pan Flute)"/>
+    <indexentry index="22" name="Hyrule Field (Sunset 3 - Strings)"/>
+    <indexentry index="23" name="Hyrule Field (Sunset 4 - OoT Theme)"/>
+    <indexentry index="24" name="Dodongo's Cavern"/>
+    <indexentry index="25" name="Kakariko Village (Strings, Adult) [2]"/>
+    <indexentry index="26" name="Battle: Regular Enemy"/>
+    <indexentry index="27" name="Battle: Boss [1]"/>
+    <indexentry index="28" name="Inside the Deku Tree &amp; Secret Grottos"/>
+    <indexentry index="29" name="Hyrule Castle Town"/>
+    <indexentry index="30" name="Title Screen"/>
+    <indexentry index="31" name="Inside a House"/>
+    <indexentry index="32" name="Fanfare: Game Over!"/>
+    <indexentry index="33" name="Fanfare: Boss Defeated!"/>
+    <indexentry index="34" name="Fanfare: Get an Item!"/>
+    <indexentry index="35" name="Fanfare: Ganondorf Appears!"/>
+    <indexentry index="36" name="Fanfare: Get a Heart Container!"/>
+    <indexentry index="37" name="Warp Song: &quot;Prelude of Light&quot;"/>
+    <indexentry index="38" name="Jabu-Jabu's Belly"/>
+    <indexentry index="39" name="Kakariko Village (Guitar, Child) [1]"/>
+    <indexentry index="40" name="Great Fairy's Fountain"/>
+    <indexentry index="41" name="Zelda's Theme"/>
+    <indexentry index="42" name="Fire Temple"/>
+    <indexentry index="43" name="Fanfare: Open a Treasure Chest!"/>
+    <indexentry index="44" name="Forest Temple"/>
+    <indexentry index="45" name="Castle Courtyard"/>
+    <indexentry index="46" name="Ganon's Tower"/>
+    <indexentry index="47" name="Lon Lon Ranch"/>
+    <indexentry index="48" name="Goron City"/>
+    <indexentry index="49" name="Hyrule Field (Morning, Day 1)"/>
+    <indexentry index="50" name="Fanfare: Get a Spiritual Stone!"/>
+    <indexentry index="51" name="Warp Song: &quot;Bolero of Fire&quot;"/>
+    <indexentry index="52" name="Warp Song: &quot;Minuet of Forest&quot;"/>
+    <indexentry index="53" name="Warp Song: &quot;Serenade of Water&quot;"/>
+    <indexentry index="54" name="Warp Song: &quot;Requiem of Spirit&quot;"/>
+    <indexentry index="55" name="Warp Song: &quot;Nocturne of Shadow&quot;"/>
+    <indexentry index="56" name="Battle: Miniboss"/>
+    <indexentry index="57" name="Fanfare: Get a Heart Piece!"/>
+    <indexentry index="58" name="Temple of Time"/>
+    <indexentry index="59" name="Fanfare: Escape from Lon Lon Ranch!"/>
+    <indexentry index="60" name="Kokiri Forest"/>
+    <indexentry index="61" name="Fanfare: Learned a Song!"/>
+    <indexentry index="62" name="Lost Woods"/>
+    <indexentry index="63" name="Spirit Temple"/>
+    <indexentry index="64" name="Horse Race"/>
+    <indexentry index="65" name="Fanfare: Horse Race Victory!"/>
+    <indexentry index="66" name="Ingo's Theme"/>
+    <indexentry index="67" name="Fanfare: Get a Medallion!"/>
+    <indexentry index="68" name="Ocarina Song: &quot;Saria's Song&quot;"/>
+    <indexentry index="69" name="Ocarina Song: &quot;Epona's Song&quot;"/>
+    <indexentry index="70" name="Ocarina Song: &quot;Zelda's Lullaby&quot;"/>
+    <indexentry index="71" name="Ocarina Song: &quot;Sun's Song&quot;"/>
+    <indexentry index="72" name="Ocarina Song: &quot;Song of Time&quot;"/>
+    <indexentry index="73" name="Ocarina Song: &quot;Song of Storms&quot;"/>
+    <indexentry index="74" name="Intro Cutscene ~Fairy Flying~"/>
+    <indexentry index="75" name="Great Deku Tree's Theme"/>
+    <indexentry index="76" name="Windmill Hut"/>
+    <indexentry index="77" name="Chamber of the Sages"/>
+    <indexentry index="78" name="Minigame Shop"/>
+    <indexentry index="79" name="Sheik's Theme"/>
+    <indexentry index="80" name="Zora's Domain"/>
+    <indexentry index="81" name="Fanfare: A Meeting with Zelda! (Generic Reunion Theme)"/>
+    <indexentry index="82" name="Zelda's Theme ~Reprise~"/>
+    <indexentry index="83" name="Fanfare: Pull the Master Sword!"/>
+    <indexentry index="84" name="Ganondorf's Theme"/>
+    <indexentry index="85" name="Shop Theme"/>
+    <indexentry index="86" name="Legend of Hyrule (Short Version)"/>
+    <indexentry index="87" name="Ptr to Great Fairy's Fountain (Title Screen)"/>
+    <indexentry index="88" name="Ice Cavern"/>
+    <indexentry index="89" name="Fanfare: Open the Door of Time!"/>
+    <indexentry index="90" name="Kaepora Gaebora's Theme"/>
+    <indexentry index="91" name="Shadow Temple"/>
+    <indexentry index="92" name="Water Temple"/>
+    <indexentry index="93" name="Fanfare: Bridge of the Six Sages!"/>
+    <indexentry index="94" name="Fanfare: Seal of the Six Sages!"/>
+    <indexentry index="95" name="Gerudo Valley"/>
+    <indexentry index="96" name="Potion Shop"/>
+    <indexentry index="97" name="Koume &amp; Kotake's Theme"/>
+    <indexentry index="98" name="Castle Collapsing"/>
+    <indexentry index="99" name="Inside Ganon's Castle"/>
+    <indexentry index="100" name="Battle: Great King of Evil, Ganondorf"/>
+    <indexentry index="101" name="Battle: Ganon"/>
+    <indexentry index="102" name="Ending Cutscene ~Ocarina of Time~"/>
+    <indexentry index="103" name="End Credits &amp; Staff Roll [1]"/>
+    <indexentry index="104" name="End Credits &amp; Staff Roll [2]"/>
+    <indexentry index="105" name="End Credits &amp; Staff Roll [3]"/>
+    <indexentry index="106" name="End Credits &amp; Staff Roll [4]"/>
+    <indexentry index="107" name="Battle: Boss [2]"/>
+    <indexentry index="108" name="Timed Minigame"/>
+    <indexentry index="109" name="Unknown technical seq, affects some actors' SFX"/>
+  </audioseqidx>
+  <audiotableidx/>
+  <midiopts ppqnmultiplier="10" mtrvol="SysEx MstrVol" chnvol="CC7 (Volume)"
+            chnpriority="CC25 (None)" bendrange="6" q_other_time="1" q_vol_time="3"
+            q_vol_amp="2" q_other_amp="1" stacksize="4" formatbytedefault="32"
+            typebytedefault="50" delta_vel="5" delta_gate="3" delta_cc="3"
+            writeseqformat="1" writeseqtype="1" writechanbits="1" writeloopall="1"
+            writeheader="1" writechanreset="1" ptrtype="shortest" usecalls="1"
+            useloops="1" q_pitch_time="1" q_pitch_amp="1" q_pan_time="3"
+            q_pan_amp="2"/>
+  <abfstructs align="16">
+    <struct name="ABIndex">
+      <field name="NUM_BANK" datatype="uint16" ispointer="0" isarray="0" meaning="NUM_BANK"/>
+      <field name="zeros" datatype="uint16" ispointer="0" isarray="1" meaning="None"
+             arraylenfixed="7" defaultval="0"/>
+      <field name="unnamed" datatype="ABIndexEntry" ispointer="0" isarray="1"
+             meaning="List of Banks" arraylenvar="NUM_BANK"/>
+    </struct>
+    <struct name="ABIndexEntry">
+      <field name="addr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Bank (in Audiobank)"
+             ptrto="ABHeader"/>
+      <field name="len" datatype="uint32" ispointer="0" isarray="0" meaning="Bank Length"/>
+      <field name="unknownA" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+             defaultval="2"/>
+      <field name="unknownB" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+             defaultval="2"/>
+      <field name="tablenum" datatype="uint8" ispointer="0" isarray="0" meaning="Sample Table number"/>
+      <field name="unknownD" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+             defaultval="255"/>
+      <field name="NUM_INST" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_INST"/>
+      <field name="NUM_DRUM" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_DRUM"/>
+      <field name="unknownG" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+             defaultval="0"/>
+      <field name="NUM_SFX" datatype="uint8" ispointer="0" isarray="0" meaning="NUM_SFX"/>
+    </struct>
+    <struct name="ABHeader"/>
+    <struct name="ABBank">
+      <field name="drumptr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr Drum List"
+             ptrto="ABDrumList"/>
+      <field name="sfxptr" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr SFX List"
+             ptrto="ABSFXList"/>
+      <field name="instlist" datatype="uint32" ispointer="1" isarray="1" meaning="List of Ptrs to Insts"
+             ptrto="ABInstrument" arraylenvar="NUM_INST"/>
+    </struct>
+    <struct name="ABDrumList">
+      <field name="drumlist" datatype="uint32" ispointer="1" isarray="1" meaning="List of Ptrs to Drums"
+             ptrto="ABDrum" arraylenvar="NUM_DRUM"/>
+    </struct>
+    <struct name="ABSFXList">
+      <field name="sfxlist" datatype="ABSound" ispointer="0" isarray="1" meaning="List of Sounds"
+             arraylenvar="NUM_SFX"/>
+    </struct>
+    <struct name="ABInstrument">
+      <field name="unknown1" datatype="uint8" ispointer="0" isarray="0" meaning="None"/>
+      <field name="Low/Mid Split" datatype="uint8" ispointer="0" isarray="0"
+             meaning="splitPoint1"/>
+      <field name="Mid/High Split" datatype="uint8" ispointer="0" isarray="0"
+             meaning="splitPoint2"/>
+      <field name="Release Rate" datatype="uint8" ispointer="0" isarray="0"
+             meaning="releaseRate"/>
+      <field name="Envelope Pointer" datatype="uint32" ispointer="1" isarray="0"
+             meaning="Ptr Envelope" ptrto="ABEnvelope"/>
+      <field name="Sample Pointer Array" datatype="ABSound" ispointer="0"
+             isarray="1" meaning="pointerArray" arraylenfixed="3"/>
+    </struct>
+    <struct name="ABDrum">
+      <field name="Releaase Rate" datatype="uint8" ispointer="0" isarray="0"
+             meaning="releaseRate"/>
+      <field name="Pan" datatype="uint8" ispointer="0" isarray="0" meaning="pan"/>
+      <field name="unknown3" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+             defaultval="0"/>
+      <field name="unknown4" datatype="uint8" ispointer="0" isarray="0" meaning="None"
+             defaultval="0"/>
+      <field name="Drum Sound" datatype="ABSound" ispointer="0" isarray="0"
+             meaning="drumSound"/>
+      <field name="Envelope Pointer" datatype="uint32" ispointer="1" isarray="0"
+             meaning="Ptr Envelope" ptrto="ABEnvelope"/>
+    </struct>
+    <struct name="ABSound">
+      <field name="Sample Pointer" datatype="uint32" ispointer="1" isarray="0"
+             meaning="Ptr Sample" ptrto="ABSample"/>
+      <field name="Tuning" datatype="float32" ispointer="0" isarray="0" meaning="key"/>
+    </struct>
+    <struct name="ABEnvelope">
+      <field name="Attack Time" datatype="int16" ispointer="0" isarray="0"
+             meaning="attackTime"/>
+      <field name="Attack Amplitude" datatype="uint16" ispointer="0" isarray="0"
+             meaning="attackAmp"/>
+      <field name="Hold Time" datatype="int16" ispointer="0" isarray="0" meaning="holdTime"/>
+      <field name="Hold Amplitude" datatype="uint16" ispointer="0" isarray="0"
+             meaning="holdAmp"/>
+      <field name="Decay Time" datatype="int16" ispointer="0" isarray="0"
+             meaning="decayTime"/>
+      <field name="Sustain Amplitude" datatype="uint16" ispointer="0" isarray="0"
+             meaning="sustainAmp"/>
+      <field name="End" datatype="int16" ispointer="0" isarray="0" meaning="allFs"/>
+      <field name="Extra" datatype="uint16" ispointer="0" isarray="0" meaning="allZeros"/>
+    </struct>
+    <struct name="ABSample">
+      <field name="unknown1" datatype="uint8" ispointer="0" isarray="0" meaning="None"/>
+      <field name="unknown2" datatype="uint8" ispointer="0" isarray="0" meaning="None"/>
+      <field name="Sample Size" datatype="uint16" ispointer="0" isarray="0"
+             meaning="sampleSize"/>
+      <field name="Sample Address" datatype="uint32" ispointer="0" isarray="0"
+             meaning="sampleAddr" ptrto="ATSample"/>
+      <field name="Loop" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr ALADPCMLoop"
+             ptrto="ALADPCMLoop"/>
+      <field name="Book" datatype="uint32" ispointer="1" isarray="0" meaning="Ptr ALADPCMBook"
+             ptrto="ALADPCMBook"/>
+    </struct>
+    <struct name="ALADPCMBook" NUM_PRED="-1">
+      <field name="order" datatype="int32" ispointer="0" isarray="0" meaning="None"/>
+      <field name="npredictors" datatype="int32" ispointer="0" isarray="0"
+             meaning="NUM_PRED"/>
+      <field name="book" datatype="ALADPCMPredictor" ispointer="0" isarray="1"
+             meaning="Array of Predictors" arraylenvar="NUM_PRED"/>
+    </struct>
+    <struct name="ALADPCMPredictor">
+      <field name="data" datatype="int16" ispointer="0" isarray="1" meaning="None"
+             arraylenfixed="16"/>
+    </struct>
+    <struct name="ALADPCMLoop" HAS_TAIL="-1">
+      <field name="Loop Start" datatype="uint32" ispointer="0" isarray="0"
+             meaning="Loop Start"/>
+      <field name="Loop End" datatype="uint32" ispointer="0" isarray="0" meaning="Loop End"/>
+      <field name="Loop Count" datatype="uint32" ispointer="0" isarray="0"
+             meaning="Loop Count" defaultval="-1"/>
+      <field name="ADPCM State" datatype="uint32" ispointer="0" isarray="0"
+             meaning="None" defaultval="0"/>
+      <field name="Tail Data" datatype="ALADPCMTail" ispointer="0" isarray="1"
+             meaning="Tail Data (if Loop Start != 0)" arraylenvar="HAS_TAIL"/>
+    </struct>
+    <struct name="ALADPCMTail">
+      <field name="some_adpcm_data" datatype="int16" ispointer="0" isarray="1"
+             meaning="None" arraylenfixed="16"/>
+    </struct>
+  </abfstructs>
+</RomDesc>
